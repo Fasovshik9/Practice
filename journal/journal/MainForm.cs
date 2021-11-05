@@ -220,7 +220,6 @@ namespace journal
                     }
                     catch (Exception ex)
                     {
-                        // Ops, maybe the id doesn't exists ?
                         MessageBox.Show(ex.Message);
                     }
                     RefreshListRegister(sqlConnection);
