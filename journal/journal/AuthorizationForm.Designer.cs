@@ -168,6 +168,7 @@ namespace journal
             this.Name = "AuthorizationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "authorizationForm";
+            this.Activated += new System.EventHandler(this.AuthorizationForm_Activated);
             this.Load += new System.EventHandler(this.AuthorizationForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -154,5 +154,14 @@ namespace journal
                 passFild.UseSystemPasswordChar = false;
             }
         }
+
+        private void AuthorizationForm_Activated(object sender, EventArgs e)
+        {
+            passFild.Text = phrasePass;
+            passFild.ForeColor = Color.Gray;
+            passFild.UseSystemPasswordChar = false;
+            loginFild.Text = phraseLogin;
+            loginFild.ForeColor = Color.Gray;
+        }
     }
 }
