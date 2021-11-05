@@ -15,6 +15,7 @@ namespace journal
 {
     public partial class MainForm : Form
     {
+        //try
         private ChangeUserForm ChangeUserForm = new ChangeUserForm();
         private ChangeThingForm ChangeThingForm = new ChangeThingForm();
 
