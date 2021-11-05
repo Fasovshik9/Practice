@@ -17,6 +17,7 @@ namespace journal
         const string phraseComment = "Enter Comment";
         const string phraseTopic = "Enter Topic";
 
+        public string userNameForReadOnly;
         public string idChangeThing;
         public string privilageUserAddThing;
         MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["journal"].ConnectionString);
@@ -117,11 +118,6 @@ namespace journal
                 sqlConnection.Close();
                 usersLoginFild.Visible = false;
             }
-            else
-            {
-                usersLoginComboBox.Visible = false;
-            }
-
 
             idFild.Text = idChangeThing;
             MySqlCommand command = new MySqlCommand("SELECT * FROM `usersjournal` WHERE id = @Id", sqlConnection);
@@ -136,7 +132,20 @@ namespace journal
             }
             else
             {
+                usersLoginComboBox.Visible = false;
                 usersLoginFild.Text = Convert.ToString(table.Rows[0].ItemArray[1]);
+                if (userNameForReadOnly == usersLoginFild.Text)
+                {
+                    usersLoginFild.ReadOnly = false;
+                    topicField.ReadOnly = false;
+                    commentField.ReadOnly = false;
+                }
+                else
+                {
+                    usersLoginFild.ReadOnly = true;
+                    topicField.ReadOnly = true;
+                    commentField.ReadOnly = true;
+                }
             }
             
             topicField.Text = Convert.ToString(table.Rows[0].ItemArray[2]);

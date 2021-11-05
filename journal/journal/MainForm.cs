@@ -398,17 +398,18 @@ namespace journal
         {
             if (this.listJournal.SelectedItems.Count != 0)
             {
-                if ((loginUserForDelete == userNameLabel.Text && privilegeUser == "user") || privilegeUser == "admin")
-                {
+                //if ((loginUserForDelete == userNameLabel.Text && privilegeUser == "user") || privilegeUser == "admin")
+                //{
                     ChangeThingForm.idChangeThing = idValueMouse;
                     ChangeThingForm.privilageUserAddThing = privilegeUser;
+                    ChangeThingForm.userNameForReadOnly = userNameLabel.Text;
                     ChangeThingForm.ShowDialog();
                     RefreshListJournal(sqlConnection);
-                }    
-                else
-                {
-                    MessageBox.Show("This thing isnt your!");
-                }
+               // }    
+                //else
+                //{
+                //    MessageBox.Show("This thing isnt your!");
+                //}
             }
             else
             {

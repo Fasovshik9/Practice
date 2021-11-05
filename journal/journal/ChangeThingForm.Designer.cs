@@ -44,6 +44,8 @@ namespace journal
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.commentField = new System.Windows.Forms.RichTextBox();
             this.topicField = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +74,8 @@ namespace journal
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
@@ -205,6 +209,24 @@ namespace journal
             this.topicField.Enter += new System.EventHandler(this.topicField_Enter);
             this.topicField.Leave += new System.EventHandler(this.topicField_Leave);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(24, 326);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "label6";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(82, 326);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "label7";
+            // 
             // ChangeThingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,5 +264,7 @@ namespace journal
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.RichTextBox commentField;
         private System.Windows.Forms.TextBox topicField;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
     }
 }
