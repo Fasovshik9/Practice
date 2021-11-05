@@ -67,7 +67,7 @@ namespace journal
             commandDatabase.CommandTimeout = 60;
             if (loginFild.TextLength <= 13)
             {
-                if (loginFild.TextLength >= 7)
+                if (loginFild.TextLength >= 5)
                 {
                     if (passFild.TextLength >= 7)
                     {
@@ -87,7 +87,7 @@ namespace journal
                     }
                     else MessageBox.Show("User pass too short! min 7 char");
                 }
-                else MessageBox.Show("User name too short! min 7 char");
+                else MessageBox.Show("User name too short! min 5 char");
             }
             else MessageBox.Show("User name too long! max 12 char");
         }
