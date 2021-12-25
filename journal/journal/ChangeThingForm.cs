@@ -14,8 +14,8 @@ namespace journal
 {
     public partial class ChangeThingForm : Form
     {
-        const string phraseComment = "Enter Comment";
-        const string phraseTopic = "Enter Topic";
+        const string phraseComment = "Введите комментарий";
+        const string phraseTopic = "Введите тему";
 
         public string userNameForReadOnly;
         public string idChangeThing;

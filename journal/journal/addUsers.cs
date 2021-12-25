@@ -14,8 +14,8 @@ namespace journal
 {
     public partial class addUsers : Form
     {
-        const string phraseLogin = "Enter Login";
-        const string phrasePass = "Enter Pass";
+        const string phraseLogin = "Введите логин";
+        const string phrasePass = "Введите пароль";
 
         public addUsers()
         {

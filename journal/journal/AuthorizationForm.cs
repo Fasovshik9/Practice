@@ -15,8 +15,8 @@ namespace journal
 
     public partial class AuthorizationForm : Form
     {
-        const string phraseLogin = "Enter Login";
-        const string phrasePass = "Enter Pass";
+        const string phraseLogin = "Введите логин";
+        const string phrasePass = "Введите пароль";
         //private MySqlConnection sqlConnection = null;
         public AuthorizationForm()
         {
@@ -53,7 +53,7 @@ namespace journal
 
                 if (loginFild.Text == phraseLogin || passFild.Text == phrasePass)
                 {
-                    MessageBox.Show("Enter your login and password!");
+                    MessageBox.Show("Введите логин и пароль!");
                     return;
                 }
                 else
@@ -75,7 +75,7 @@ namespace journal
                     }
                     else
                     {
-                        MessageBox.Show("Wrong login or password!");
+                        MessageBox.Show("Неправльный логин или пароль!");
                     }
                         
                 }

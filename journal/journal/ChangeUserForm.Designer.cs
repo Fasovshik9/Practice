@@ -59,38 +59,38 @@ namespace journal
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.passFild);
             this.panel2.Controls.Add(this.loginFild);
-            this.panel2.Location = new System.Drawing.Point(52, 69);
+            this.panel2.Location = new System.Drawing.Point(12, 69);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(213, 180);
+            this.panel2.Size = new System.Drawing.Size(253, 180);
             this.panel2.TabIndex = 27;
             // 
             // buttonCancel
             // 
-            this.buttonCancel.BackColor = System.Drawing.Color.Yellow;
+            this.buttonCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
             this.buttonCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancel.Location = new System.Drawing.Point(76, 147);
+            this.buttonCancel.Location = new System.Drawing.Point(129, 151);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 36;
-            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Text = "Отменить";
             this.buttonCancel.UseVisualStyleBackColor = false;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // changeUserButton
             // 
-            this.changeUserButton.BackColor = System.Drawing.Color.Yellow;
+            this.changeUserButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.changeUserButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.changeUserButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
             this.changeUserButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.changeUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.changeUserButton.Location = new System.Drawing.Point(76, 117);
+            this.changeUserButton.Location = new System.Drawing.Point(129, 121);
             this.changeUserButton.Name = "changeUserButton";
             this.changeUserButton.Size = new System.Drawing.Size(75, 23);
             this.changeUserButton.TabIndex = 35;
-            this.changeUserButton.Text = "Enter";
+            this.changeUserButton.Text = "Добавить";
             this.changeUserButton.UseVisualStyleBackColor = false;
             this.changeUserButton.Click += new System.EventHandler(this.changeUserButton_Click);
             // 
@@ -100,7 +100,7 @@ namespace journal
             this.privilegeComboBox.Items.AddRange(new object[] {
             "admin",
             "user"});
-            this.privilegeComboBox.Location = new System.Drawing.Point(66, 90);
+            this.privilegeComboBox.Location = new System.Drawing.Point(119, 94);
             this.privilegeComboBox.Name = "privilegeComboBox";
             this.privilegeComboBox.Size = new System.Drawing.Size(100, 21);
             this.privilegeComboBox.TabIndex = 34;
@@ -108,15 +108,16 @@ namespace journal
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 93);
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(45, 97);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 13);
+            this.label5.Size = new System.Drawing.Size(68, 13);
             this.label5.TabIndex = 33;
-            this.label5.Text = "privilege";
+            this.label5.Text = "Привилегия";
             // 
             // idFild
             // 
-            this.idFild.Location = new System.Drawing.Point(66, 5);
+            this.idFild.Location = new System.Drawing.Point(119, 9);
             this.idFild.Name = "idFild";
             this.idFild.ReadOnly = true;
             this.idFild.Size = new System.Drawing.Size(100, 20);
@@ -125,7 +126,8 @@ namespace journal
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(42, 8);
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(95, 12);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(18, 13);
             this.label6.TabIndex = 31;
@@ -134,24 +136,26 @@ namespace journal
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 66);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(68, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 30;
-            this.label3.Text = "password";
+            this.label3.Text = "Пароль";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 40);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(10, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.Size = new System.Drawing.Size(103, 13);
             this.label2.TabIndex = 29;
-            this.label2.Text = "login";
+            this.label2.Text = "Имя пользователя";
             // 
             // passFild
             // 
-            this.passFild.Location = new System.Drawing.Point(66, 63);
+            this.passFild.Location = new System.Drawing.Point(119, 67);
             this.passFild.Name = "passFild";
             this.passFild.Size = new System.Drawing.Size(100, 20);
             this.passFild.TabIndex = 28;
@@ -160,7 +164,7 @@ namespace journal
             // 
             // loginFild
             // 
-            this.loginFild.Location = new System.Drawing.Point(66, 37);
+            this.loginFild.Location = new System.Drawing.Point(119, 41);
             this.loginFild.Name = "loginFild";
             this.loginFild.Size = new System.Drawing.Size(100, 20);
             this.loginFild.TabIndex = 27;
@@ -172,15 +176,16 @@ namespace journal
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(81, 9);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(67, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 31);
+            this.label1.Size = new System.Drawing.Size(198, 31);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Change User";
+            this.label1.Text = "Редактирование";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -192,7 +197,7 @@ namespace journal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Turquoise;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(314, 261);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

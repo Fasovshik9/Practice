@@ -14,8 +14,8 @@ namespace journal
 {
     public partial class AddNewThing : Form
     {
-        const string phraseComment = "Enter Comment";
-        const string phraseTopic = "Enter Topic";
+        const string phraseComment = "Введите коментарий";
+        const string phraseTopic = "Введите тему";
 
         public string loginUser;
         public string privilageUserAddThing;
@@ -33,7 +33,7 @@ namespace journal
         {
             if (topicField.Text == phraseTopic || commentField.Text == phraseComment)
             {
-                MessageBox.Show("All lines must fill in!");
+                MessageBox.Show("Все поля должны быть заполенны!");
                 return;
             }
             string userLogin = usersLoginComboBox.Text;

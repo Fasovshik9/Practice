@@ -44,15 +44,13 @@ namespace journal
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.commentField = new System.Windows.Forms.RichTextBox();
             this.topicField = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -65,17 +63,17 @@ namespace journal
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(288, 20);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(203, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 31);
+            this.label1.Size = new System.Drawing.Size(368, 31);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Change Thing";
+            this.label1.Text = "Изменение выполненного дела";
             // 
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
@@ -96,6 +94,7 @@ namespace journal
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(635, 12);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(16, 13);
@@ -105,33 +104,36 @@ namespace journal
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(276, 8);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.Size = new System.Drawing.Size(33, 13);
             this.label4.TabIndex = 32;
-            this.label4.Text = "Date";
+            this.label4.Text = "Дата";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 38);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(35, 38);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 31;
-            this.label3.Text = "Topic";
+            this.label3.Text = "Тема";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(2, 12);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(3, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.Size = new System.Drawing.Size(80, 13);
             this.label2.TabIndex = 30;
-            this.label2.Text = "User name";
+            this.label2.Text = "Пользователь";
             // 
             // buttonCancel
             // 
-            this.buttonCancel.BackColor = System.Drawing.Color.Yellow;
+            this.buttonCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
             this.buttonCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -140,13 +142,13 @@ namespace journal
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 29;
-            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.Text = "Отменить";
             this.buttonCancel.UseVisualStyleBackColor = false;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // usersLoginFild
             // 
-            this.usersLoginFild.Location = new System.Drawing.Point(64, 8);
+            this.usersLoginFild.Location = new System.Drawing.Point(83, 10);
             this.usersLoginFild.Name = "usersLoginFild";
             this.usersLoginFild.ReadOnly = true;
             this.usersLoginFild.Size = new System.Drawing.Size(100, 20);
@@ -155,7 +157,7 @@ namespace journal
             // usersLoginComboBox
             // 
             this.usersLoginComboBox.FormattingEnabled = true;
-            this.usersLoginComboBox.Location = new System.Drawing.Point(66, 8);
+            this.usersLoginComboBox.Location = new System.Drawing.Point(83, 11);
             this.usersLoginComboBox.Name = "usersLoginComboBox";
             this.usersLoginComboBox.Size = new System.Drawing.Size(106, 21);
             this.usersLoginComboBox.TabIndex = 27;
@@ -170,7 +172,7 @@ namespace journal
             // 
             // buttonChangeThing
             // 
-            this.buttonChangeThing.BackColor = System.Drawing.Color.Yellow;
+            this.buttonChangeThing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonChangeThing.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonChangeThing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
             this.buttonChangeThing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -179,7 +181,7 @@ namespace journal
             this.buttonChangeThing.Name = "buttonChangeThing";
             this.buttonChangeThing.Size = new System.Drawing.Size(75, 23);
             this.buttonChangeThing.TabIndex = 25;
-            this.buttonChangeThing.Text = "Enter";
+            this.buttonChangeThing.Text = "Изменить";
             this.buttonChangeThing.UseVisualStyleBackColor = false;
             this.buttonChangeThing.Click += new System.EventHandler(this.buttonChangeThing_Click);
             // 
@@ -202,36 +204,18 @@ namespace journal
             // 
             // topicField
             // 
-            this.topicField.Location = new System.Drawing.Point(64, 35);
+            this.topicField.Location = new System.Drawing.Point(83, 35);
             this.topicField.Name = "topicField";
-            this.topicField.Size = new System.Drawing.Size(693, 20);
+            this.topicField.Size = new System.Drawing.Size(674, 20);
             this.topicField.TabIndex = 22;
             this.topicField.Enter += new System.EventHandler(this.topicField_Enter);
             this.topicField.Leave += new System.EventHandler(this.topicField_Leave);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 326);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 34;
-            this.label6.Text = "label6";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(82, 326);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "label7";
             // 
             // ChangeThingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Turquoise;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -264,7 +248,5 @@ namespace journal
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.RichTextBox commentField;
         private System.Windows.Forms.TextBox topicField;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
     }
 }

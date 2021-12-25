@@ -30,9 +30,9 @@ namespace journal
         private bool exitValue = true;
         private MySqlConnection sqlConnection = new MySqlConnection(ConfigurationManager.ConnectionStrings["journal"].ConnectionString);
 
-        const string phraseNewPass = "Enter new Pass";
-        const string phraseOldPass = "Enter Old Pass";
-        const string phraseRepPass = "Repit new Pass";
+        const string phraseNewPass = "Введите пароль";
+        const string phraseOldPass = "Введите старый пароль";
+        const string phraseRepPass = "Введите новый пароль";
 
         public MainForm()
         {
@@ -527,7 +527,7 @@ namespace journal
         {
             try
             {
-                using (System.IO.TextWriter tw = new System.IO.StreamWriter(@"C:\Users\fasovshik9\Desktop\listViewContent.txt"))
+                using (System.IO.TextWriter tw = new System.IO.StreamWriter(@"C:\Users\vadim\Desktop\listViewContent.txt"))
                 {
                     foreach (ListViewItem item in listJournal.Items)
                     {
