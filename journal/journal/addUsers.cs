@@ -31,7 +31,7 @@ namespace journal
         {
             if (loginFild.Text == phraseLogin || passFild.Text == phrasePass)
             {
-                MessageBox.Show("All lines must fill in!");
+                MessageBox.Show("Все поля должны быть заполенны !");
                 return;
             }
             ///////////////////////////////////////////////////////////////////////////// check new user to reapit
@@ -46,7 +46,7 @@ namespace journal
 
             if (table.Rows.Count > 0)
             {
-                MessageBox.Show("This account already exists!\nChange login");
+                MessageBox.Show("Этот аккаунт уже существует!\nИзменить логин!");
                 return;
             }
             /////////////////////////////////////////////////////////////////////////////
@@ -65,31 +65,27 @@ namespace journal
             commandDatabase.Parameters.Add("@uPr", MySqlDbType.VarChar).Value = userPrivilege;
 
             commandDatabase.CommandTimeout = 60;
-            if (loginFild.TextLength <= 13)
+            if (loginFild.TextLength <= 12 && loginFild.TextLength >= 7) 
             {
-                if (loginFild.TextLength >= 5)
+                if (passFild.TextLength >= 5)
                 {
-                    if (passFild.TextLength >= 7)
+                    try
                     {
-                        try
-                        {
-                            sqlConnection.Open();
-                            MySqlDataReader myReader = commandDatabase.ExecuteReader();
-                            MessageBox.Show("User succesfully registered");
-                            sqlConnection.Close();
-                        }
-                        catch (Exception ex)
-                        {
-                            // Show any error message.
-                            MessageBox.Show(ex.Message);
-                        }
-                        this.Close();
+                        sqlConnection.Open();
+                        MySqlDataReader myReader = commandDatabase.ExecuteReader();
+                        MessageBox.Show("Пользователь успешно зарегистрирован!");
+                        sqlConnection.Close();
                     }
-                    else MessageBox.Show("User pass too short! min 7 char");
+                    catch (Exception ex)
+                    {
+                        // Show any error message.
+                        MessageBox.Show(ex.Message);
+                    }
+                    this.Close();
                 }
-                else MessageBox.Show("User name too short! min 5 char");
+                else MessageBox.Show("Пароль пользователя слишком короткий!\nМинимум 5 знаков!");
             }
-            else MessageBox.Show("User name too long! max 12 char");
+            else MessageBox.Show("Некоректное имя пользователя!\nМаксимум 12 знаков и минимум 7!");
         }
 
         private void addUsers_Load(object sender, EventArgs e)

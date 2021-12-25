@@ -90,7 +90,7 @@ namespace journal
             this.changeUserButton.Name = "changeUserButton";
             this.changeUserButton.Size = new System.Drawing.Size(75, 23);
             this.changeUserButton.TabIndex = 35;
-            this.changeUserButton.Text = "Добавить";
+            this.changeUserButton.Text = "Изменить";
             this.changeUserButton.UseVisualStyleBackColor = false;
             this.changeUserButton.Click += new System.EventHandler(this.changeUserButton_Click);
             // 
@@ -166,6 +166,7 @@ namespace journal
             // 
             this.loginFild.Location = new System.Drawing.Point(119, 41);
             this.loginFild.Name = "loginFild";
+            this.loginFild.ReadOnly = true;
             this.loginFild.Size = new System.Drawing.Size(100, 20);
             this.loginFild.TabIndex = 27;
             this.loginFild.Enter += new System.EventHandler(this.loginFild_Enter);

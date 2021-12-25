@@ -61,7 +61,7 @@ namespace journal
                 {
                     sqlConnection.Open();
                     MySqlDataReader myReader = commandDatabase.ExecuteReader();
-                    MessageBox.Show("Case was added!");
+                    MessageBox.Show("Новая дело было добавлено");
                     sqlConnection.Close();
                 }
                 catch (Exception ex)
@@ -71,7 +71,7 @@ namespace journal
                 }
                 this.Close();
             }
-            else MessageBox.Show("All field must fill in");
+            else MessageBox.Show("Все поля должны быть заполнены !");
 
         }
 

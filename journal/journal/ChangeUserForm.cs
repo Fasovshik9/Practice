@@ -20,6 +20,7 @@ namespace journal
         public ChangeUserForm()
         {
             InitializeComponent();
+           
             passFild.UseSystemPasswordChar = true;
         }
 
@@ -27,7 +28,7 @@ namespace journal
         {
             if (loginFild.Text == phraseLogin || passFild.Text == phrasePass)
             {
-                MessageBox.Show("All lines must fill in!");
+                MessageBox.Show("Все полня должны быть заполнены!");
                 return;
             }
             ///////////////////////////////////////////////////////////////////////////// check new user to reapit
@@ -39,12 +40,6 @@ namespace journal
 
             adapter.SelectCommand = command;
             adapter.Fill(table);
-
-            if (table.Rows.Count > 0)
-            {
-                MessageBox.Show("This account already exists!\nChange login");
-                return;
-            }
             /////////////////////////////////////////////////////////////////////////////
             string userLogin = loginFild.Text;
             string userPass = passFild.Text;
@@ -62,9 +57,9 @@ namespace journal
 
             commandDatabase.CommandTimeout = 60;
             MySqlDataReader reader;
-            if (loginFild.TextLength >= 7)
+            if (loginFild.TextLength <= 12 && loginFild.TextLength >= 7)
             {
-                if (passFild.TextLength >= 7)
+                if (passFild.TextLength >= 5)
                 {
                     try
                     {
@@ -79,9 +74,9 @@ namespace journal
                         MessageBox.Show(ex.Message);
                     }
                 }
-                else MessageBox.Show("User pass too short! min 7 char");
+                else MessageBox.Show("Пароль пользователя слишком короткий!\nMинимум 5 знаков!");
             }
-            else MessageBox.Show("User name too short! min 7 char");
+            else MessageBox.Show("Некоректное имя пользователя!\nМаксимум 12 знаков и минимум 7!");
             this.Close();
         }
 

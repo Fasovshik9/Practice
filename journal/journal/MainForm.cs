@@ -201,7 +201,7 @@ namespace journal
         {
             if (this.listRegister.SelectedItems.Count != 0)
             {
-                DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete the user?", "Delete user", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить пользователя?", "Удалить пользователя", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     string idUserMouse = idValueMouse;
@@ -227,7 +227,7 @@ namespace journal
             }
             else
             {
-                MessageBox.Show("Click on the line!");
+                MessageBox.Show("Выберете строку в таблице!");
             }
 
             //DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete the user?", "Delete user", MessageBoxButtons.YesNo);
@@ -251,7 +251,7 @@ namespace journal
             }
             else
             {
-                MessageBox.Show("Click on the line!");
+                MessageBox.Show("Выберете строку в таблице!");
             }
         }
 
@@ -259,7 +259,7 @@ namespace journal
         {
             if (oldUserPassFild.Text == phraseOldPass || newUserPassFild.Text == phraseNewPass || newUserPassFild.Text == phraseRepPass)
             {
-                MessageBox.Show("All fields should fill in!");
+                MessageBox.Show("Все поля должны быть заполнены!");
                 return;
             }
             string idUser = idValueUser;
@@ -290,7 +290,7 @@ namespace journal
                     {
                         if (newUserPassFild.Text == repitUserPassFild.Text)
                         {
-                            if (newUserPassFild.TextLength >= 7)
+                            if (newUserPassFild.TextLength >= 5)
                             {
                                 try
                                 {
@@ -298,7 +298,7 @@ namespace journal
                                     reader = commandDatabase.ExecuteReader();
                                     // Succesfully updated
                                     sqlConnection.Close();
-                                    MessageBox.Show("You have successfully changed your password!");
+                                    MessageBox.Show("Вы успешно изменили ваш пароль!");
                                 }
                                 catch (Exception ex)
                                 {
@@ -306,15 +306,15 @@ namespace journal
                                     MessageBox.Show(ex.Message);
                                 }
                             }
-                            else MessageBox.Show("The password too short! min 7 char");
+                            else MessageBox.Show("Пароль слишком короткий! минимум 5 знаков");
                         }
-                        else MessageBox.Show("The password entered the second time does not match!");
+                        else MessageBox.Show("Введенный второй раз пароль не совпадает!");
                     }
-                    else MessageBox.Show("The old and new password are the same!");
+                    else MessageBox.Show("Старый и новый пароль одинаковые!");
                 }
-                else MessageBox.Show("You entered an incorrect old password!");
+                else MessageBox.Show("Вы ввели неверный старый пароль!");
             }
-            else MessageBox.Show("Fill in all the fields!");
+            else MessageBox.Show("Все поля должны быть заполнены!");
             oldUserPassword = newUserPassFild.Text;
             oldUserPassFild.Text = phraseOldPass;
             newUserPassFild.Text = phraseNewPass;
@@ -355,7 +355,7 @@ namespace journal
             {
                 if ((loginUserForDelete == userNameLabel.Text && privilegeUser == "user") || privilegeUser == "admin")
                 {
-                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete the user?", "Delete user", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить выполненное дело?", "Delete user", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
                         string idUserMouse = idValueMouse;
@@ -385,12 +385,12 @@ namespace journal
                 }
                 else
                 {
-                    MessageBox.Show("This thing isnt your!"); 
+                    MessageBox.Show("Это не выше выполненное дело!"); 
                 }
             }
             else
             { 
-                MessageBox.Show("Click on the line!"); 
+                MessageBox.Show("Выберете строку в таблице!"); 
             }        
         }
 
@@ -413,7 +413,7 @@ namespace journal
             }
             else
             {
-                MessageBox.Show("Click on the line!");
+                MessageBox.Show("Выберете строку в таблице!");
             }
         }
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////
