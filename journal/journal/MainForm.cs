@@ -439,7 +439,25 @@ namespace journal
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////
         private void listJournal_DoubleClick(object sender, EventArgs e)
         {
-            buttonChangeNewThing.PerformClick();
+            if (this.listJournal.SelectedItems.Count != 0)
+            {
+                //if ((loginUserForDelete == userNameLabel.Text && privilegeUser == "user") || privilegeUser == "admin")
+                //{
+                ChangeThingForm.idChangeThing = idValueMouse;
+                ChangeThingForm.privilageUserAddThing = privilegeUser;
+                ChangeThingForm.userNameForReadOnly = userNameLabel.Text;
+                ChangeThingForm.ShowDialog();
+                RefreshListJournal(sqlConnection);
+                // }    
+                //else
+                //{
+                //    MessageBox.Show("This thing isnt your!");
+                //}
+            }
+            else
+            {
+                MessageBox.Show("Выберете строку в таблице!");
+            }
         }
 
         private void listRegister_DoubleClick(object sender, EventArgs e)

@@ -136,13 +136,15 @@ namespace journal
                 usersLoginFild.Text = Convert.ToString(table.Rows[0].ItemArray[1]);
                 if (userNameForReadOnly == usersLoginFild.Text)
                 {
-                    usersLoginFild.ReadOnly = false;
+                    buttonChangeThing.Enabled = true;
+                    dateTimePicker.Enabled = true;
                     topicField.ReadOnly = false;
                     commentField.ReadOnly = false;
                 }
                 else
                 {
-                    usersLoginFild.ReadOnly = true;
+                    buttonChangeThing.Enabled = false;
+                    dateTimePicker.Enabled = false;
                     topicField.ReadOnly = true;
                     commentField.ReadOnly = true;
                 }
