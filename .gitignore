@@ -1,4 +1,4 @@
 /journal/.vs
-/journal/journal/obj
+/journal/journal/obj/*
 /journal/journal/bin/Debug/*
 !/journal/journal/bin/Debug/MySql.Data.dll
