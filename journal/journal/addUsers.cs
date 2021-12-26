@@ -65,7 +65,7 @@ namespace journal
             commandDatabase.Parameters.Add("@uPr", MySqlDbType.VarChar).Value = userPrivilege;
 
             commandDatabase.CommandTimeout = 60;
-            if (loginFild.TextLength <= 12 && loginFild.TextLength >= 7) 
+            if (loginFild.TextLength <= 12 && loginFild.TextLength >= 5) 
             {
                 if (passFild.TextLength >= 5)
                 {
@@ -85,7 +85,7 @@ namespace journal
                 }
                 else MessageBox.Show("Пароль пользователя слишком короткий!\nМинимум 5 знаков!");
             }
-            else MessageBox.Show("Некоректное имя пользователя!\nМаксимум 12 знаков и минимум 7!");
+            else MessageBox.Show("Некоректное имя пользователя!\nМинимум 5 знаков и максимум 12!");
         }
 
         private void addUsers_Load(object sender, EventArgs e)

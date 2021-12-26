@@ -310,7 +310,7 @@ namespace journal
                                     MessageBox.Show(ex.Message);
                                 }
                             }
-                            else MessageBox.Show("Пароль слишком короткий! минимум 5 знаков");
+                            else MessageBox.Show("Пароль слишком короткий! Минимум 5 знаков!");
                         }
                         else MessageBox.Show("Введенный второй раз пароль не совпадает!");
                     }
@@ -639,6 +639,18 @@ namespace journal
             paddedBounds.Offset(1, yOffset);
             TextRenderer.DrawText(e.Graphics, page.Text, Font, paddedBounds, page.ForeColor);
         
+        }
+
+        private void listJournal_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
+        {
+            e.Cancel = true;
+            e.NewWidth = listJournal.Columns[e.ColumnIndex].Width;
+        }
+
+        private void listRegister_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
+        {
+            e.Cancel = true;
+            e.NewWidth = listRegister.Columns[e.ColumnIndex].Width;
         }
     }
 

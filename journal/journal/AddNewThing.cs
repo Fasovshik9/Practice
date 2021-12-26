@@ -61,7 +61,7 @@ namespace journal
                 {
                     sqlConnection.Open();
                     MySqlDataReader myReader = commandDatabase.ExecuteReader();
-                    MessageBox.Show("Новая дело было добавлено");
+                    MessageBox.Show("Новое дело было добавлено");
                     sqlConnection.Close();
                 }
                 catch (Exception ex)

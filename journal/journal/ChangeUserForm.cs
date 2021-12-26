@@ -57,8 +57,7 @@ namespace journal
 
             commandDatabase.CommandTimeout = 60;
             MySqlDataReader reader;
-            if (loginFild.TextLength <= 12 && loginFild.TextLength >= 7)
-            {
+            
                 if (passFild.TextLength >= 5)
                 {
                     try
@@ -67,6 +66,8 @@ namespace journal
                         reader = commandDatabase.ExecuteReader();
                         // Succesfully updated
                         sqlConnection.Close();
+                        MessageBox.Show("Пароль изменен!");
+                        this.Close();
                     }
                     catch (Exception ex)
                     {
@@ -75,9 +76,7 @@ namespace journal
                     }
                 }
                 else MessageBox.Show("Пароль пользователя слишком короткий!\nMинимум 5 знаков!");
-            }
-            else MessageBox.Show("Некоректное имя пользователя!\nМаксимум 12 знаков и минимум 7!");
-            this.Close();
+            //this.Close();
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)

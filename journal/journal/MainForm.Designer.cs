@@ -368,6 +368,7 @@ namespace journal
             this.listJournal.TabIndex = 0;
             this.listJournal.UseCompatibleStateImageBehavior = false;
             this.listJournal.View = System.Windows.Forms.View.Details;
+            this.listJournal.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listJournal_ColumnWidthChanging);
             this.listJournal.DoubleClick += new System.EventHandler(this.listJournal_DoubleClick);
             this.listJournal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listJournal_MouseDown);
             // 
@@ -488,6 +489,7 @@ namespace journal
             this.listRegister.TabIndex = 6;
             this.listRegister.UseCompatibleStateImageBehavior = false;
             this.listRegister.View = System.Windows.Forms.View.Details;
+            this.listRegister.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listRegister_ColumnWidthChanging);
             this.listRegister.DoubleClick += new System.EventHandler(this.listRegister_DoubleClick);
             this.listRegister.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listRegister_MouseDown);
             // 
