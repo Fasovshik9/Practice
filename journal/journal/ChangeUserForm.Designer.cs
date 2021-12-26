@@ -68,8 +68,8 @@ namespace journal
             // 
             this.buttonCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.buttonCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.buttonCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancel.Location = new System.Drawing.Point(129, 151);
             this.buttonCancel.Name = "buttonCancel";
@@ -83,8 +83,8 @@ namespace journal
             // 
             this.changeUserButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.changeUserButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.changeUserButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.changeUserButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.changeUserButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.changeUserButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.changeUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.changeUserButton.Location = new System.Drawing.Point(129, 121);
             this.changeUserButton.Name = "changeUserButton";

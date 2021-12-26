@@ -56,6 +56,7 @@ namespace journal
             this.topicColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.RegisterTabPage = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonChange = new System.Windows.Forms.Button();
@@ -147,6 +148,7 @@ namespace journal
             this.mainTabControl.Controls.Add(this.RegisterTabPage);
             this.mainTabControl.Controls.Add(this.profileTabPage);
             this.mainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainTabControl.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.mainTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.mainTabControl.Location = new System.Drawing.Point(0, 55);
             this.mainTabControl.Name = "mainTabControl";
@@ -154,6 +156,7 @@ namespace journal
             this.mainTabControl.ShowToolTips = true;
             this.mainTabControl.Size = new System.Drawing.Size(784, 406);
             this.mainTabControl.TabIndex = 2;
+            this.mainTabControl.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.mainTabControl_DrawItem);
             this.mainTabControl.SelectedIndexChanged += new System.EventHandler(this.mainTabControl_SelectedIndexChanged_1);
             // 
             // jurnalTabPage
@@ -162,6 +165,7 @@ namespace journal
             this.jurnalTabPage.Controls.Add(this.panel6);
             this.jurnalTabPage.Controls.Add(this.panel5);
             this.jurnalTabPage.Controls.Add(this.listJournal);
+            this.jurnalTabPage.ForeColor = System.Drawing.Color.White;
             this.jurnalTabPage.Location = new System.Drawing.Point(4, 22);
             this.jurnalTabPage.Name = "jurnalTabPage";
             this.jurnalTabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -185,9 +189,10 @@ namespace journal
             // 
             this.buttonReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonReport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.buttonReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.buttonReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonReport.ForeColor = System.Drawing.Color.Black;
             this.buttonReport.Location = new System.Drawing.Point(312, 3);
             this.buttonReport.Name = "buttonReport";
             this.buttonReport.Size = new System.Drawing.Size(75, 23);
@@ -200,9 +205,10 @@ namespace journal
             // 
             this.buttonChangeNewThing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonChangeNewThing.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonChangeNewThing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.buttonChangeNewThing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonChangeNewThing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.buttonChangeNewThing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonChangeNewThing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonChangeNewThing.ForeColor = System.Drawing.Color.Black;
             this.buttonChangeNewThing.Location = new System.Drawing.Point(101, 3);
             this.buttonChangeNewThing.Name = "buttonChangeNewThing";
             this.buttonChangeNewThing.Size = new System.Drawing.Size(75, 23);
@@ -215,9 +221,10 @@ namespace journal
             // 
             this.buttonDeletThing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonDeletThing.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonDeletThing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.buttonDeletThing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonDeletThing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.buttonDeletThing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonDeletThing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDeletThing.ForeColor = System.Drawing.Color.Black;
             this.buttonDeletThing.Location = new System.Drawing.Point(202, 3);
             this.buttonDeletThing.Name = "buttonDeletThing";
             this.buttonDeletThing.Size = new System.Drawing.Size(75, 23);
@@ -230,9 +237,10 @@ namespace journal
             // 
             this.buttonAddNewThing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonAddNewThing.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonAddNewThing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.buttonAddNewThing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonAddNewThing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.buttonAddNewThing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonAddNewThing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddNewThing.ForeColor = System.Drawing.Color.Black;
             this.buttonAddNewThing.Location = new System.Drawing.Point(3, 3);
             this.buttonAddNewThing.Name = "buttonAddNewThing";
             this.buttonAddNewThing.Size = new System.Drawing.Size(75, 23);
@@ -280,9 +288,10 @@ namespace journal
             // 
             this.cancelFilterJurnalButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.cancelFilterJurnalButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cancelFilterJurnalButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.cancelFilterJurnalButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.cancelFilterJurnalButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.cancelFilterJurnalButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.cancelFilterJurnalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelFilterJurnalButton.ForeColor = System.Drawing.Color.Black;
             this.cancelFilterJurnalButton.Location = new System.Drawing.Point(492, 10);
             this.cancelFilterJurnalButton.Name = "cancelFilterJurnalButton";
             this.cancelFilterJurnalButton.Size = new System.Drawing.Size(136, 23);
@@ -303,9 +312,10 @@ namespace journal
             // 
             this.filterDateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.filterDateButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.filterDateButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.filterDateButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.filterDateButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.filterDateButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.filterDateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.filterDateButton.ForeColor = System.Drawing.Color.Black;
             this.filterDateButton.Location = new System.Drawing.Point(492, 36);
             this.filterDateButton.Name = "filterDateButton";
             this.filterDateButton.Size = new System.Drawing.Size(136, 23);
@@ -342,6 +352,7 @@ namespace journal
             // 
             // listJournal
             // 
+            this.listJournal.Activation = System.Windows.Forms.ItemActivation.TwoClick;
             this.listJournal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.listJournal.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.idColumnHeader,
@@ -378,6 +389,7 @@ namespace journal
             this.RegisterTabPage.Controls.Add(this.panel2);
             this.RegisterTabPage.Controls.Add(this.listRegister);
             this.RegisterTabPage.Controls.Add(this.panel4);
+            this.RegisterTabPage.ForeColor = System.Drawing.Color.White;
             this.RegisterTabPage.Location = new System.Drawing.Point(4, 22);
             this.RegisterTabPage.Name = "RegisterTabPage";
             this.RegisterTabPage.Size = new System.Drawing.Size(776, 380);
@@ -387,6 +399,7 @@ namespace journal
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.buttonAdd);
             this.panel2.Controls.Add(this.buttonDelete);
             this.panel2.Controls.Add(this.buttonChange);
@@ -395,13 +408,29 @@ namespace journal
             this.panel2.Size = new System.Drawing.Size(245, 29);
             this.panel2.TabIndex = 7;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(141, -326);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 21);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Отчистить фильтр";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.cancelFilterRegButton_Click);
+            // 
             // buttonAdd
             // 
             this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.buttonAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.buttonAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAdd.ForeColor = System.Drawing.Color.Black;
             this.buttonAdd.Location = new System.Drawing.Point(3, 3);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 23);
@@ -414,9 +443,10 @@ namespace journal
             // 
             this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.buttonDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.buttonDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDelete.ForeColor = System.Drawing.Color.Black;
             this.buttonDelete.Location = new System.Drawing.Point(165, 3);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(75, 23);
@@ -429,9 +459,10 @@ namespace journal
             // 
             this.buttonChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonChange.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonChange.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.buttonChange.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonChange.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.buttonChange.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonChange.ForeColor = System.Drawing.Color.Black;
             this.buttonChange.Location = new System.Drawing.Point(84, 3);
             this.buttonChange.Name = "buttonChange";
             this.buttonChange.Size = new System.Drawing.Size(75, 23);
@@ -491,9 +522,10 @@ namespace journal
             // 
             this.cancelFilterRegButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cancelFilterRegButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cancelFilterRegButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.cancelFilterRegButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.cancelFilterRegButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.cancelFilterRegButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.cancelFilterRegButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelFilterRegButton.ForeColor = System.Drawing.Color.Black;
             this.cancelFilterRegButton.Location = new System.Drawing.Point(173, 8);
             this.cancelFilterRegButton.Name = "cancelFilterRegButton";
             this.cancelFilterRegButton.Size = new System.Drawing.Size(75, 21);
@@ -524,6 +556,7 @@ namespace journal
             // 
             this.profileTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.profileTabPage.Controls.Add(this.panel3);
+            this.profileTabPage.ForeColor = System.Drawing.Color.White;
             this.profileTabPage.Location = new System.Drawing.Point(4, 22);
             this.profileTabPage.Name = "profileTabPage";
             this.profileTabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -572,9 +605,10 @@ namespace journal
             // 
             this.exitFromUserButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.exitFromUserButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exitFromUserButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.exitFromUserButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.exitFromUserButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.exitFromUserButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.exitFromUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitFromUserButton.ForeColor = System.Drawing.Color.Black;
             this.exitFromUserButton.Location = new System.Drawing.Point(70, 212);
             this.exitFromUserButton.Name = "exitFromUserButton";
             this.exitFromUserButton.Size = new System.Drawing.Size(108, 23);
@@ -587,9 +621,10 @@ namespace journal
             // 
             this.buttonChangeNewUserPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonChangeNewUserPass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonChangeNewUserPass.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.buttonChangeNewUserPass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonChangeNewUserPass.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.buttonChangeNewUserPass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonChangeNewUserPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonChangeNewUserPass.ForeColor = System.Drawing.Color.Black;
             this.buttonChangeNewUserPass.Location = new System.Drawing.Point(70, 183);
             this.buttonChangeNewUserPass.Name = "buttonChangeNewUserPass";
             this.buttonChangeNewUserPass.Size = new System.Drawing.Size(108, 23);
@@ -629,6 +664,7 @@ namespace journal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.mainTabControl);
             this.Controls.Add(this.panel1);
@@ -705,5 +741,6 @@ namespace journal
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonChange;
         private System.Windows.Forms.Button cancelFilterRegButton;
+        private System.Windows.Forms.Button button1;
     }
 }

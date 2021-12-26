@@ -85,8 +85,8 @@ namespace journal
             // cencelButton
             // 
             this.cencelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cencelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.cencelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.cencelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.cencelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.cencelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cencelButton.Location = new System.Drawing.Point(136, 141);
             this.cencelButton.Name = "cencelButton";
@@ -122,8 +122,8 @@ namespace journal
             // 
             this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.buttonAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.buttonAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAdd.Location = new System.Drawing.Point(136, 111);
             this.buttonAdd.Name = "buttonAdd";

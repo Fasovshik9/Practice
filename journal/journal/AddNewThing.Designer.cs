@@ -127,8 +127,8 @@ namespace journal
             // 
             this.cancelButton.BackColor = System.Drawing.Color.Cyan;
             this.cancelButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cancelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.cancelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.cancelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.cancelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelButton.Location = new System.Drawing.Point(403, 326);
             this.cancelButton.Name = "cancelButton";
@@ -150,8 +150,8 @@ namespace journal
             // 
             this.buttonAddNewThing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonAddNewThing.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonAddNewThing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.buttonAddNewThing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonAddNewThing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.buttonAddNewThing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonAddNewThing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddNewThing.Location = new System.Drawing.Point(301, 326);
             this.buttonAddNewThing.Name = "buttonAddNewThing";

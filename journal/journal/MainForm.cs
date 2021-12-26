@@ -37,6 +37,7 @@ namespace journal
         public MainForm()
         {
             InitializeComponent();
+
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -78,6 +79,9 @@ namespace journal
             oldUserPassFild.UseSystemPasswordChar = newUserPassFild.UseSystemPasswordChar = repitUserPassFild.UseSystemPasswordChar = false;
 
             repitUserPassFild.ForeColor  = newUserPassFild.ForeColor = oldUserPassFild.ForeColor = Color.Gray;
+
+
+            
         }
 
         private void RefreshListRegister(List<string[]> list)
@@ -623,6 +627,18 @@ namespace journal
                 repitUserPassFild.ForeColor = Color.Gray;
                 repitUserPassFild.UseSystemPasswordChar = false;
             }
+        }
+///
+        private void mainTabControl_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            TabPage page = mainTabControl.TabPages[e.Index];
+            e.Graphics.FillRectangle(new SolidBrush(page.BackColor), e.Bounds);
+
+            Rectangle paddedBounds = e.Bounds;
+            int yOffset = (e.State == DrawItemState.Selected) ? -2 : 1;
+            paddedBounds.Offset(1, yOffset);
+            TextRenderer.DrawText(e.Graphics, page.Text, Font, paddedBounds, page.ForeColor);
+        
         }
     }
 

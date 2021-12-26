@@ -135,8 +135,8 @@ namespace journal
             // 
             this.buttonCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.buttonCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.buttonCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCancel.Location = new System.Drawing.Point(408, 337);
             this.buttonCancel.Name = "buttonCancel";
@@ -174,8 +174,8 @@ namespace journal
             // 
             this.buttonChangeThing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonChangeThing.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonChangeThing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.buttonChangeThing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonChangeThing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.buttonChangeThing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonChangeThing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonChangeThing.Location = new System.Drawing.Point(312, 337);
             this.buttonChangeThing.Name = "buttonChangeThing";
