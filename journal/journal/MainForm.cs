@@ -549,7 +549,8 @@ namespace journal
         {
             try
             {
-                using (System.IO.TextWriter tw = new System.IO.StreamWriter(@"C:\Users\vadim\Desktop\listViewContent.txt"))
+                string dirDestopUser = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Offer.txt";
+                using (System.IO.TextWriter tw = new System.IO.StreamWriter(dirDestopUser))
                 {
                     foreach (ListViewItem item in listJournal.Items)
                     {
@@ -560,6 +561,7 @@ namespace journal
                         }
                         tw.WriteLine();
                     }
+                    MessageBox.Show("Отчет был успешно соаздан!\nНа рабочем столе.");
                 }
             }
             catch
