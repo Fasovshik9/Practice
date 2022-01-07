@@ -37,6 +37,7 @@ namespace journal
             this.mainTabControl = new System.Windows.Forms.TabControl();
             this.jurnalTabPage = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.buttonOpenStatistic = new System.Windows.Forms.Button();
             this.buttonReport = new System.Windows.Forms.Button();
             this.buttonChangeNewThing = new System.Windows.Forms.Button();
             this.buttonDeletThing = new System.Windows.Forms.Button();
@@ -176,14 +177,31 @@ namespace journal
             // panel6
             // 
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel6.Controls.Add(this.buttonOpenStatistic);
             this.panel6.Controls.Add(this.buttonReport);
             this.panel6.Controls.Add(this.buttonChangeNewThing);
             this.panel6.Controls.Add(this.buttonDeletThing);
             this.panel6.Controls.Add(this.buttonAddNewThing);
             this.panel6.Location = new System.Drawing.Point(176, 340);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(392, 32);
+            this.panel6.Size = new System.Drawing.Size(506, 32);
             this.panel6.TabIndex = 16;
+            // 
+            // buttonOpenStatistic
+            // 
+            this.buttonOpenStatistic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonOpenStatistic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonOpenStatistic.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.buttonOpenStatistic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.buttonOpenStatistic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOpenStatistic.ForeColor = System.Drawing.Color.Black;
+            this.buttonOpenStatistic.Location = new System.Drawing.Point(412, 3);
+            this.buttonOpenStatistic.Name = "buttonOpenStatistic";
+            this.buttonOpenStatistic.Size = new System.Drawing.Size(75, 23);
+            this.buttonOpenStatistic.TabIndex = 19;
+            this.buttonOpenStatistic.Text = "Статистика";
+            this.buttonOpenStatistic.UseVisualStyleBackColor = false;
+            this.buttonOpenStatistic.Click += new System.EventHandler(this.buttonOpenStatistic_Click);
             // 
             // buttonReport
             // 
@@ -379,6 +397,7 @@ namespace journal
             // loginUserColumnHeader
             // 
             this.loginUserColumnHeader.Text = "Пользователь";
+            this.loginUserColumnHeader.Width = 98;
             // 
             // topicColumnHeader
             // 
@@ -670,6 +689,7 @@ namespace journal
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.mainTabControl);
             this.Controls.Add(this.panel1);
+            this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
@@ -744,5 +764,6 @@ namespace journal
         private System.Windows.Forms.Button buttonChange;
         private System.Windows.Forms.Button cancelFilterRegButton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonOpenStatistic;
     }
 }

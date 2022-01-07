@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -10,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace journal
 {
@@ -37,7 +37,6 @@ namespace journal
         public MainForm()
         {
             InitializeComponent();
-
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -66,6 +65,7 @@ namespace journal
             if (privilegeUser == "user")
             {
                 mainTabControl.TabPages.Remove(RegisterTabPage);
+                buttonOpenStatistic.Visible = false;
             }
 
             mainTabControl.SelectedIndex += 1;
@@ -653,6 +653,12 @@ namespace journal
         {
             e.Cancel = true;
             e.NewWidth = listRegister.Columns[e.ColumnIndex].Width;
+        }
+
+        private void buttonOpenStatistic_Click(object sender, EventArgs e)
+        {
+            StatisticForm StatisticForm = new StatisticForm();
+            StatisticForm.ShowDialog();
         }
     }
 
