@@ -660,6 +660,11 @@ namespace journal
             StatisticForm StatisticForm = new StatisticForm();
             StatisticForm.ShowDialog();
         }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 }

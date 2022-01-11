@@ -79,6 +79,7 @@ namespace journal
             this.oldUserPassFild = new System.Windows.Forms.TextBox();
             this.repitUserPassFild = new System.Windows.Forms.TextBox();
             this.newUserPassFild = new System.Windows.Forms.TextBox();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.mainTabControl.SuspendLayout();
             this.jurnalTabPage.SuspendLayout();
@@ -177,14 +178,15 @@ namespace journal
             // panel6
             // 
             this.panel6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel6.Controls.Add(this.buttonExit);
             this.panel6.Controls.Add(this.buttonOpenStatistic);
             this.panel6.Controls.Add(this.buttonReport);
             this.panel6.Controls.Add(this.buttonChangeNewThing);
             this.panel6.Controls.Add(this.buttonDeletThing);
             this.panel6.Controls.Add(this.buttonAddNewThing);
-            this.panel6.Location = new System.Drawing.Point(176, 340);
+            this.panel6.Location = new System.Drawing.Point(132, 340);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(506, 32);
+            this.panel6.Size = new System.Drawing.Size(595, 32);
             this.panel6.TabIndex = 16;
             // 
             // buttonOpenStatistic
@@ -681,6 +683,22 @@ namespace journal
             this.newUserPassFild.Enter += new System.EventHandler(this.newUserPassFild_Enter);
             this.newUserPassFild.Leave += new System.EventHandler(this.newUserPassFild_Leave);
             // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.ForeColor = System.Drawing.Color.Black;
+            this.buttonExit.Location = new System.Drawing.Point(502, 3);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(75, 23);
+            this.buttonExit.TabIndex = 20;
+            this.buttonExit.Text = "Выход";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -765,5 +783,6 @@ namespace journal
         private System.Windows.Forms.Button cancelFilterRegButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonOpenStatistic;
+        private System.Windows.Forms.Button buttonExit;
     }
 }
