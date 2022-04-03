@@ -64,11 +64,11 @@ namespace journal
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(203, 21);
+            this.label1.Location = new System.Drawing.Point(285, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(368, 31);
+            this.label1.Size = new System.Drawing.Size(223, 31);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Изменение выполненного дела";
+            this.label1.Text = "Изменение задачи";
             // 
             // panel2
             // 
@@ -125,11 +125,11 @@ namespace journal
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(9, 14);
+            this.label2.Location = new System.Drawing.Point(0, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 30;
-            this.label2.Text = "Сотрудник";
+            this.label2.Text = "Пользователь:";
             // 
             // buttonCancel
             // 

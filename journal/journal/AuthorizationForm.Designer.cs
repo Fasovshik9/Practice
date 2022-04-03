@@ -88,7 +88,7 @@ namespace journal
             this.panel3.Location = new System.Drawing.Point(261, 103);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(241, 200);
-            this.panel3.TabIndex = 11;
+            this.panel3.TabIndex = 0;
             // 
             // buttonExit
             // 
@@ -100,7 +100,7 @@ namespace journal
             this.buttonExit.Location = new System.Drawing.Point(92, 137);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(75, 23);
-            this.buttonExit.TabIndex = 16;
+            this.buttonExit.TabIndex = 2;
             this.buttonExit.Text = "Выход";
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
@@ -116,7 +116,7 @@ namespace journal
             this.buttonLogin.Location = new System.Drawing.Point(92, 108);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(75, 23);
-            this.buttonLogin.TabIndex = 15;
+            this.buttonLogin.TabIndex = 1;
             this.buttonLogin.Text = "Вход";
             this.buttonLogin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonLogin.UseVisualStyleBackColor = false;
@@ -147,7 +147,7 @@ namespace journal
             this.passFild.Location = new System.Drawing.Point(80, 73);
             this.passFild.Name = "passFild";
             this.passFild.Size = new System.Drawing.Size(100, 20);
-            this.passFild.TabIndex = 12;
+            this.passFild.TabIndex = 4;
             this.passFild.Enter += new System.EventHandler(this.passFild_Enter);
             this.passFild.Leave += new System.EventHandler(this.passFild_Leave);
             // 
@@ -156,7 +156,7 @@ namespace journal
             this.loginFild.Location = new System.Drawing.Point(80, 31);
             this.loginFild.Name = "loginFild";
             this.loginFild.Size = new System.Drawing.Size(100, 20);
-            this.loginFild.TabIndex = 11;
+            this.loginFild.TabIndex = 3;
             this.loginFild.Enter += new System.EventHandler(this.loginFild_Enter);
             this.loginFild.Leave += new System.EventHandler(this.loginFild_Leave);
             // 
