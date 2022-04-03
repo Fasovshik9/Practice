@@ -32,7 +32,7 @@ namespace journal
         {
             if (topicField.Text == phraseTopic || commentField.Text == phraseComment)
             {
-                MessageBox.Show("Все поля должны быть заполнены!");
+                MessageBox.Show("Все поля должны быть заполнены!", "Ошибка");
                 return;
             }
             string usersLogin;
@@ -80,7 +80,7 @@ namespace journal
                 }
                 this.Close();
             }
-            else MessageBox.Show("Все поля должны быть заполнены!");
+            else MessageBox.Show("Все поля должны быть заполнены!", "Ошибка");
         }
 
         private void ChangeThingForm_Load(object sender, EventArgs e)

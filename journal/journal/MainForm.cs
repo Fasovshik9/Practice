@@ -231,7 +231,7 @@ namespace journal
             }
             else
             {
-                MessageBox.Show("Выберете строку в таблице!");
+                MessageBox.Show("Выберете пользователя!", "Ошибка");
             }
 
             //DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete the user?", "Delete user", MessageBoxButtons.YesNo);
@@ -255,7 +255,7 @@ namespace journal
             }
             else
             {
-                MessageBox.Show("Выберете строку в таблице!");
+                MessageBox.Show("Выберете задачу!", "Ошибка");
             }
         }
 
@@ -263,7 +263,7 @@ namespace journal
         {
             if (oldUserPassFild.Text == phraseOldPass || newUserPassFild.Text == phraseNewPass || newUserPassFild.Text == phraseRepPass)
             {
-                MessageBox.Show("Все поля должны быть заполнены!");
+                MessageBox.Show("Все поля должны быть заполнены!", "Ошибка");
                 return;
             }
             string idUser = idValueUser;
@@ -302,7 +302,7 @@ namespace journal
                                     reader = commandDatabase.ExecuteReader();
                                     // Succesfully updated
                                     sqlConnection.Close();
-                                    MessageBox.Show("Вы успешно изменили ваш пароль!");
+                                    MessageBox.Show("Вы успешно изменили ваш пароль!", "Уведомление");
                                 }
                                 catch (Exception ex)
                                 {
@@ -310,15 +310,15 @@ namespace journal
                                     MessageBox.Show(ex.Message);
                                 }
                             }
-                            else MessageBox.Show("Пароль слишком короткий! Минимум 5 знаков!");
+                            else MessageBox.Show("Пароль слишком короткий! Минимум 5 знаков!", "Ошибка");
                         }
-                        else MessageBox.Show("Введенный второй раз пароль не совпадает!");
+                        else MessageBox.Show("Введенный второй раз пароль не совпадает!", "Ошибка");
                     }
-                    else MessageBox.Show("Старый и новый пароль одинаковые!");
+                    else MessageBox.Show("Старый и новый пароль одинаковые!", "Ошибка");
                 }
-                else MessageBox.Show("Вы ввели неверный старый пароль!");
+                else MessageBox.Show("Вы ввели неверный старый пароль!", "Ошибка");
             }
-            else MessageBox.Show("Все поля должны быть заполнены!");
+            else MessageBox.Show("Все поля должны быть заполнены!", "Ошибка");
             oldUserPassword = newUserPassFild.Text;
             oldUserPassFild.Text = phraseOldPass;
             newUserPassFild.Text = phraseNewPass;
@@ -359,7 +359,7 @@ namespace journal
             {
                 if ((loginUserForDelete == userNameLabel.Text && privilegeUser == "user") || privilegeUser == "admin")
                 {
-                    DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить выполненное дело?", "Delete user", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить выбранную задачу?", "Удаление задачи", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
                         string idUserMouse = idValueMouse;
@@ -389,12 +389,12 @@ namespace journal
                 }
                 else
                 {
-                    MessageBox.Show("Это не выше выполненное дело!"); 
+                    MessageBox.Show("Вы выбрали не свою задачу!", "Ошибка"); 
                 }
             }
             else
             { 
-                MessageBox.Show("Выберете строку в таблице!"); 
+                MessageBox.Show("Выберете задачу!", "Ошибка"); 
             }        
         }
 
@@ -417,7 +417,7 @@ namespace journal
             }
             else
             {
-                MessageBox.Show("Выберете строку в таблице!");
+                MessageBox.Show("Выберете задачу!", "Ошибка");
             }
         }
         //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -460,7 +460,7 @@ namespace journal
             }
             else
             {
-                MessageBox.Show("Выберете строку в таблице!");
+                MessageBox.Show("Выберете задачу!", "Ошибка");
             }
         }
 
@@ -561,7 +561,7 @@ namespace journal
                         }
                         tw.WriteLine();
                     }
-                    MessageBox.Show("Отчет был успешно соаздан!\nНа рабочем столе.");
+                    MessageBox.Show("Отчет был успешно соаздан!\nНа рабочем столе.", "Уведомление");
                 }
             }
             catch

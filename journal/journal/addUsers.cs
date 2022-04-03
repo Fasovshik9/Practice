@@ -46,7 +46,7 @@ namespace journal
 
             if (table.Rows.Count > 0)
             {
-                MessageBox.Show("Этот аккаунт уже существует!\nИзменить логин!");
+                MessageBox.Show("Этот пользователь уже существует!\nИзменить логин!", "Ошибка");
                 return;
             }
             /////////////////////////////////////////////////////////////////////////////
@@ -73,7 +73,7 @@ namespace journal
                     {
                         sqlConnection.Open();
                         MySqlDataReader myReader = commandDatabase.ExecuteReader();
-                        MessageBox.Show("Пользователь успешно зарегистрирован!");
+                        MessageBox.Show("Пользователь успешно зарегистрирован!", "Уведомление");
                         sqlConnection.Close();
                     }
                     catch (Exception ex)
@@ -83,9 +83,9 @@ namespace journal
                     }
                     this.Close();
                 }
-                else MessageBox.Show("Пароль пользователя слишком короткий!\nМинимум 5 знаков!");
+                else MessageBox.Show("Пароль пользователя слишком короткий!\nМинимум 5 знаков!", "Ошибка");
             }
-            else MessageBox.Show("Некоректное имя пользователя!\nМинимум 5 знаков и максимум 12!");
+            else MessageBox.Show("Некоректное имя пользователя!\nМинимум 5 знаков и максимум 12!", "Ошибка");
         }
 
         private void addUsers_Load(object sender, EventArgs e)

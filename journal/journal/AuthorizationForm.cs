@@ -53,7 +53,7 @@ namespace journal
 
                 if (loginFild.Text == phraseLogin || passFild.Text == phrasePass)
                 {
-                    MessageBox.Show("Введите логин и пароль!");
+                    MessageBox.Show("Введите логин и пароль!", "Ошибка");
                     return;
                 }
                 else
@@ -75,7 +75,7 @@ namespace journal
                     }
                     else
                     {
-                        MessageBox.Show("Неправльный логин или пароль!");
+                        MessageBox.Show("Неправльный логин или пароль!", "Ошибка");
                     }
                         
                 }

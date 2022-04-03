@@ -28,7 +28,7 @@ namespace journal
         {
             if (loginFild.Text == phraseLogin || passFild.Text == phrasePass)
             {
-                MessageBox.Show("Все полня должны быть заполнены!");
+                MessageBox.Show("Все полня должны быть заполнены!", "Ошибка");
                 return;
             }
             ///////////////////////////////////////////////////////////////////////////// check new user to reapit
@@ -66,7 +66,7 @@ namespace journal
                         reader = commandDatabase.ExecuteReader();
                         // Succesfully updated
                         sqlConnection.Close();
-                        MessageBox.Show("Пароль изменен!");
+                        MessageBox.Show("Пароль изменен!", "Уведомление");
                         this.Close();
                     }
                     catch (Exception ex)
@@ -75,7 +75,7 @@ namespace journal
                         MessageBox.Show(ex.Message);
                     }
                 }
-                else MessageBox.Show("Пароль пользователя слишком короткий!\nMинимум 5 знаков!");
+                else MessageBox.Show("Пароль пользователя слишком короткий!\nMинимум 5 знаков!", "Ошибка");
             //this.Close();
         }
 

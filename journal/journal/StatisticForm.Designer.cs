@@ -135,7 +135,7 @@
             // 
             // loginUserColumnHeader
             // 
-            this.loginUserColumnHeader.Text = "Пользователь";
+            this.loginUserColumnHeader.Text = "Сотрудник";
             // 
             // topicColumnHeader
             // 

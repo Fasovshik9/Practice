@@ -33,7 +33,7 @@ namespace journal
         {
             if (topicField.Text == phraseTopic || commentField.Text == phraseComment)
             {
-                MessageBox.Show("Все поля должны быть заполенны!");
+                MessageBox.Show("Все поля должны быть заполенны!", "Ошибка");
                 return;
             }
             string userLogin = usersLoginComboBox.Text;
@@ -61,7 +61,7 @@ namespace journal
                 {
                     sqlConnection.Open();
                     MySqlDataReader myReader = commandDatabase.ExecuteReader();
-                    MessageBox.Show("Новое дело было добавлено");
+                    MessageBox.Show("Новое дело было добавлено", "Уведомление");
                     sqlConnection.Close();
                 }
                 catch (Exception ex)
@@ -71,7 +71,7 @@ namespace journal
                 }
                 this.Close();
             }
-            else MessageBox.Show("Все поля должны быть заполнены !");
+            else MessageBox.Show("Все поля должны быть заполнены !", "Ошибка");
 
         }
 

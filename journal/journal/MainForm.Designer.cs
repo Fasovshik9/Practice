@@ -37,6 +37,7 @@ namespace journal
             this.mainTabControl = new System.Windows.Forms.TabControl();
             this.jurnalTabPage = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.buttonOpenStatistic = new System.Windows.Forms.Button();
             this.buttonReport = new System.Windows.Forms.Button();
             this.buttonChangeNewThing = new System.Windows.Forms.Button();
@@ -79,7 +80,6 @@ namespace journal
             this.oldUserPassFild = new System.Windows.Forms.TextBox();
             this.repitUserPassFild = new System.Windows.Forms.TextBox();
             this.newUserPassFild = new System.Windows.Forms.TextBox();
-            this.buttonExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.mainTabControl.SuspendLayout();
             this.jurnalTabPage.SuspendLayout();
@@ -114,7 +114,7 @@ namespace journal
             this.userNameLabel.AutoSize = true;
             this.userNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.userNameLabel.Location = new System.Drawing.Point(634, 28);
+            this.userNameLabel.Location = new System.Drawing.Point(615, 28);
             this.userNameLabel.Name = "userNameLabel";
             this.userNameLabel.Size = new System.Drawing.Size(97, 24);
             this.userNameLabel.TabIndex = 2;
@@ -126,11 +126,11 @@ namespace journal
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(612, 0);
+            this.label7.Location = new System.Drawing.Point(615, 4);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(144, 24);
+            this.label7.Size = new System.Drawing.Size(112, 24);
             this.label7.TabIndex = 1;
-            this.label7.Text = "Пользователь:";
+            this.label7.Text = "Сотрудник:";
             // 
             // label1
             // 
@@ -188,6 +188,22 @@ namespace journal
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(595, 32);
             this.panel6.TabIndex = 16;
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.ForeColor = System.Drawing.Color.Black;
+            this.buttonExit.Location = new System.Drawing.Point(502, 3);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(75, 23);
+            this.buttonExit.TabIndex = 20;
+            this.buttonExit.Text = "Выход";
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // buttonOpenStatistic
             // 
@@ -398,7 +414,7 @@ namespace journal
             // 
             // loginUserColumnHeader
             // 
-            this.loginUserColumnHeader.Text = "Пользователь";
+            this.loginUserColumnHeader.Text = "Сотрудник";
             this.loginUserColumnHeader.Width = 98;
             // 
             // topicColumnHeader
@@ -682,22 +698,6 @@ namespace journal
             this.newUserPassFild.TabIndex = 3;
             this.newUserPassFild.Enter += new System.EventHandler(this.newUserPassFild_Enter);
             this.newUserPassFild.Leave += new System.EventHandler(this.newUserPassFild_Leave);
-            // 
-            // buttonExit
-            // 
-            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.ForeColor = System.Drawing.Color.Black;
-            this.buttonExit.Location = new System.Drawing.Point(502, 3);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(75, 23);
-            this.buttonExit.TabIndex = 20;
-            this.buttonExit.Text = "Выход";
-            this.buttonExit.UseVisualStyleBackColor = false;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // MainForm
             // 
