@@ -51,13 +51,13 @@ namespace journal
             userNameProfileLabel.Text = userNameLabel.Text;
             idColumnHeader.Width = 50;
             loginUserColumnHeader.Width = 100;
-            topicColumnHeader.Width = 530;
-            dateColumnHeader.Width = 70;
+            topicColumnHeader.Width = 610;
+            dateColumnHeader.Width = 95;
 
             UsersIdColumnHeader.Width = 50;
-            UsersLoginColumnHeader.Width = 90;
-            UsersPassColumnHeader.Width = 90;
-            UsersPrivilegeColumnHeader.Width = 80;
+            UsersLoginColumnHeader.Width = 130;
+            UsersPassColumnHeader.Width = 130;
+            UsersPrivilegeColumnHeader.Width = 130;
 
 
             RefreshListRegister(sqlConnection);
@@ -255,7 +255,7 @@ namespace journal
             }
             else
             {
-                MessageBox.Show("Выберете задачу!", "Ошибка");
+                MessageBox.Show("Выберете пользвателя!", "Ошибка");
             }
         }
 

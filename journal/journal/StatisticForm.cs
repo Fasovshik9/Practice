@@ -27,11 +27,11 @@ namespace journal
             RefreshListJournal(sqlConnection);
             idColumnHeader.Width = 50;
             loginUserColumnHeader.Width = 100;
-            topicColumnHeader.Width = 360;
-            dateColumnHeader.Width = 70;
+            topicColumnHeader.Width = 390;
+            dateColumnHeader.Width = 95;
 
             UserLogginColumn.Width = 100;
-            CountStatColumn.Width = 70;
+            CountStatColumn.Width = 98;
         }
 
         private void RefreshListJournal(MySqlConnection sqlConnection)
@@ -159,6 +159,11 @@ namespace journal
         private void button1_Click(object sender, EventArgs e)
         {
             RefreshListJournal(sqlConnection);
+        }
+
+        private void buttonExit_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

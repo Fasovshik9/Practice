@@ -44,6 +44,9 @@ namespace journal
             this.buttonDeletThing = new System.Windows.Forms.Button();
             this.buttonAddNewThing = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.usersLoginComboBox = new System.Windows.Forms.ComboBox();
             this.cancelFilterJurnalButton = new System.Windows.Forms.Button();
@@ -74,8 +77,8 @@ namespace journal
             this.profileTabPage = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.userNameProfileLabel = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.exitFromUserButton = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.buttonChangeNewUserPass = new System.Windows.Forms.Button();
             this.oldUserPassFild = new System.Windows.Forms.TextBox();
             this.repitUserPassFild = new System.Windows.Forms.TextBox();
@@ -98,23 +101,23 @@ namespace journal
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel1.Controls.Add(this.userNameLabel);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 55);
+            this.panel1.Size = new System.Drawing.Size(884, 55);
             this.panel1.TabIndex = 1;
             // 
             // userNameLabel
             // 
-            this.userNameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.userNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.userNameLabel.AutoSize = true;
             this.userNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.userNameLabel.Location = new System.Drawing.Point(655, 4);
+            this.userNameLabel.Location = new System.Drawing.Point(698, 31);
             this.userNameLabel.Name = "userNameLabel";
             this.userNameLabel.Size = new System.Drawing.Size(97, 24);
             this.userNameLabel.TabIndex = 2;
@@ -122,11 +125,11 @@ namespace journal
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(505, 4);
+            this.label7.Location = new System.Drawing.Point(672, 7);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(144, 24);
             this.label7.TabIndex = 1;
@@ -136,11 +139,11 @@ namespace journal
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(339, 9);
+            this.label1.Location = new System.Drawing.Point(360, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 31);
+            this.label1.Size = new System.Drawing.Size(150, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Журнал";
             // 
@@ -149,29 +152,28 @@ namespace journal
             this.mainTabControl.Controls.Add(this.jurnalTabPage);
             this.mainTabControl.Controls.Add(this.RegisterTabPage);
             this.mainTabControl.Controls.Add(this.profileTabPage);
+            this.mainTabControl.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.mainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainTabControl.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.mainTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.mainTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainTabControl.Location = new System.Drawing.Point(0, 55);
             this.mainTabControl.Name = "mainTabControl";
             this.mainTabControl.SelectedIndex = 0;
-            this.mainTabControl.ShowToolTips = true;
-            this.mainTabControl.Size = new System.Drawing.Size(784, 406);
+            this.mainTabControl.Size = new System.Drawing.Size(884, 606);
             this.mainTabControl.TabIndex = 2;
             this.mainTabControl.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.mainTabControl_DrawItem);
             this.mainTabControl.SelectedIndexChanged += new System.EventHandler(this.mainTabControl_SelectedIndexChanged_1);
             // 
             // jurnalTabPage
             // 
-            this.jurnalTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.jurnalTabPage.BackColor = System.Drawing.SystemColors.Info;
             this.jurnalTabPage.Controls.Add(this.panel6);
             this.jurnalTabPage.Controls.Add(this.panel5);
             this.jurnalTabPage.Controls.Add(this.listJournal);
-            this.jurnalTabPage.ForeColor = System.Drawing.Color.White;
-            this.jurnalTabPage.Location = new System.Drawing.Point(4, 22);
+            this.jurnalTabPage.ForeColor = System.Drawing.SystemColors.Info;
+            this.jurnalTabPage.Location = new System.Drawing.Point(4, 29);
             this.jurnalTabPage.Name = "jurnalTabPage";
             this.jurnalTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.jurnalTabPage.Size = new System.Drawing.Size(776, 380);
+            this.jurnalTabPage.Size = new System.Drawing.Size(876, 573);
             this.jurnalTabPage.TabIndex = 0;
             this.jurnalTabPage.Text = "Журнал";
             // 
@@ -184,22 +186,23 @@ namespace journal
             this.panel6.Controls.Add(this.buttonChangeNewThing);
             this.panel6.Controls.Add(this.buttonDeletThing);
             this.panel6.Controls.Add(this.buttonAddNewThing);
-            this.panel6.Location = new System.Drawing.Point(132, 340);
+            this.panel6.Location = new System.Drawing.Point(8, 526);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(595, 32);
+            this.panel6.Size = new System.Drawing.Size(860, 39);
             this.panel6.TabIndex = 16;
             // 
             // buttonExit
             // 
-            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonExit.BackColor = System.Drawing.Color.DodgerBlue;
             this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.ForeColor = System.Drawing.Color.Black;
-            this.buttonExit.Location = new System.Drawing.Point(502, 3);
+            this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonExit.ForeColor = System.Drawing.Color.White;
+            this.buttonExit.Location = new System.Drawing.Point(737, 3);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(75, 23);
+            this.buttonExit.Size = new System.Drawing.Size(120, 32);
             this.buttonExit.TabIndex = 20;
             this.buttonExit.Text = "Выход";
             this.buttonExit.UseVisualStyleBackColor = false;
@@ -207,15 +210,16 @@ namespace journal
             // 
             // buttonOpenStatistic
             // 
-            this.buttonOpenStatistic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonOpenStatistic.BackColor = System.Drawing.Color.DodgerBlue;
             this.buttonOpenStatistic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonOpenStatistic.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.buttonOpenStatistic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonOpenStatistic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOpenStatistic.ForeColor = System.Drawing.Color.Black;
-            this.buttonOpenStatistic.Location = new System.Drawing.Point(412, 3);
+            this.buttonOpenStatistic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonOpenStatistic.ForeColor = System.Drawing.Color.White;
+            this.buttonOpenStatistic.Location = new System.Drawing.Point(590, 4);
             this.buttonOpenStatistic.Name = "buttonOpenStatistic";
-            this.buttonOpenStatistic.Size = new System.Drawing.Size(75, 23);
+            this.buttonOpenStatistic.Size = new System.Drawing.Size(120, 32);
             this.buttonOpenStatistic.TabIndex = 19;
             this.buttonOpenStatistic.Text = "Статистика";
             this.buttonOpenStatistic.UseVisualStyleBackColor = false;
@@ -223,15 +227,16 @@ namespace journal
             // 
             // buttonReport
             // 
-            this.buttonReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonReport.BackColor = System.Drawing.Color.DodgerBlue;
             this.buttonReport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.buttonReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonReport.ForeColor = System.Drawing.Color.Black;
-            this.buttonReport.Location = new System.Drawing.Point(312, 3);
+            this.buttonReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonReport.ForeColor = System.Drawing.Color.White;
+            this.buttonReport.Location = new System.Drawing.Point(446, 4);
             this.buttonReport.Name = "buttonReport";
-            this.buttonReport.Size = new System.Drawing.Size(75, 23);
+            this.buttonReport.Size = new System.Drawing.Size(120, 32);
             this.buttonReport.TabIndex = 18;
             this.buttonReport.Text = "Отчет";
             this.buttonReport.UseVisualStyleBackColor = false;
@@ -239,15 +244,16 @@ namespace journal
             // 
             // buttonChangeNewThing
             // 
-            this.buttonChangeNewThing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonChangeNewThing.BackColor = System.Drawing.Color.DodgerBlue;
             this.buttonChangeNewThing.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonChangeNewThing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.buttonChangeNewThing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonChangeNewThing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonChangeNewThing.ForeColor = System.Drawing.Color.Black;
-            this.buttonChangeNewThing.Location = new System.Drawing.Point(101, 3);
+            this.buttonChangeNewThing.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonChangeNewThing.ForeColor = System.Drawing.Color.White;
+            this.buttonChangeNewThing.Location = new System.Drawing.Point(151, 3);
             this.buttonChangeNewThing.Name = "buttonChangeNewThing";
-            this.buttonChangeNewThing.Size = new System.Drawing.Size(75, 23);
+            this.buttonChangeNewThing.Size = new System.Drawing.Size(120, 32);
             this.buttonChangeNewThing.TabIndex = 17;
             this.buttonChangeNewThing.Text = "Изменить";
             this.buttonChangeNewThing.UseVisualStyleBackColor = false;
@@ -255,15 +261,16 @@ namespace journal
             // 
             // buttonDeletThing
             // 
-            this.buttonDeletThing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonDeletThing.BackColor = System.Drawing.Color.DodgerBlue;
             this.buttonDeletThing.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDeletThing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.buttonDeletThing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonDeletThing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDeletThing.ForeColor = System.Drawing.Color.Black;
-            this.buttonDeletThing.Location = new System.Drawing.Point(202, 3);
+            this.buttonDeletThing.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonDeletThing.ForeColor = System.Drawing.Color.White;
+            this.buttonDeletThing.Location = new System.Drawing.Point(302, 3);
             this.buttonDeletThing.Name = "buttonDeletThing";
-            this.buttonDeletThing.Size = new System.Drawing.Size(75, 23);
+            this.buttonDeletThing.Size = new System.Drawing.Size(120, 32);
             this.buttonDeletThing.TabIndex = 16;
             this.buttonDeletThing.Text = "Удалить";
             this.buttonDeletThing.UseVisualStyleBackColor = false;
@@ -271,15 +278,16 @@ namespace journal
             // 
             // buttonAddNewThing
             // 
-            this.buttonAddNewThing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonAddNewThing.BackColor = System.Drawing.Color.DodgerBlue;
             this.buttonAddNewThing.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAddNewThing.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.buttonAddNewThing.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonAddNewThing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAddNewThing.ForeColor = System.Drawing.Color.Black;
+            this.buttonAddNewThing.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonAddNewThing.ForeColor = System.Drawing.Color.White;
             this.buttonAddNewThing.Location = new System.Drawing.Point(3, 3);
             this.buttonAddNewThing.Name = "buttonAddNewThing";
-            this.buttonAddNewThing.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddNewThing.Size = new System.Drawing.Size(120, 32);
             this.buttonAddNewThing.TabIndex = 15;
             this.buttonAddNewThing.Text = "Добавить";
             this.buttonAddNewThing.UseVisualStyleBackColor = false;
@@ -288,6 +296,9 @@ namespace journal
             // panel5
             // 
             this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.label8);
+            this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.usersLoginComboBox);
             this.panel5.Controls.Add(this.cancelFilterJurnalButton);
@@ -296,27 +307,62 @@ namespace journal
             this.panel5.Controls.Add(this.beginFilterDateTimePicker);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.filterThingFild);
-            this.panel5.Location = new System.Drawing.Point(80, 6);
+            this.panel5.Location = new System.Drawing.Point(11, 6);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(647, 64);
+            this.panel5.Size = new System.Drawing.Size(857, 114);
             this.panel5.TabIndex = 15;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label9.Location = new System.Drawing.Point(324, 80);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(122, 20);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "конечная дата";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label8.Location = new System.Drawing.Point(313, 38);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(133, 20);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "начальная дата";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(363, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 24);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Фильтры";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(21, 41);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(3, 80);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(144, 13);
+            this.label6.Size = new System.Drawing.Size(151, 20);
             this.label6.TabIndex = 21;
-            this.label6.Text = "Фильтр по пользователям";
+            this.label6.Text = "по пользователям";
             // 
             // usersLoginComboBox
             // 
+            this.usersLoginComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usersLoginComboBox.FormattingEnabled = true;
-            this.usersLoginComboBox.Location = new System.Drawing.Point(171, 38);
+            this.usersLoginComboBox.Location = new System.Drawing.Point(160, 75);
             this.usersLoginComboBox.Name = "usersLoginComboBox";
-            this.usersLoginComboBox.Size = new System.Drawing.Size(100, 21);
+            this.usersLoginComboBox.Size = new System.Drawing.Size(147, 28);
             this.usersLoginComboBox.TabIndex = 20;
             this.usersLoginComboBox.TextChanged += new System.EventHandler(this.usersLoginComboBox_TextChanged);
             // 
@@ -327,34 +373,37 @@ namespace journal
             this.cancelFilterJurnalButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
             this.cancelFilterJurnalButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.cancelFilterJurnalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelFilterJurnalButton.ForeColor = System.Drawing.Color.Black;
-            this.cancelFilterJurnalButton.Location = new System.Drawing.Point(492, 10);
+            this.cancelFilterJurnalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelFilterJurnalButton.ForeColor = System.Drawing.Color.White;
+            this.cancelFilterJurnalButton.Location = new System.Drawing.Point(674, 75);
             this.cancelFilterJurnalButton.Name = "cancelFilterJurnalButton";
-            this.cancelFilterJurnalButton.Size = new System.Drawing.Size(136, 23);
+            this.cancelFilterJurnalButton.Size = new System.Drawing.Size(180, 30);
             this.cancelFilterJurnalButton.TabIndex = 19;
-            this.cancelFilterJurnalButton.Text = "Отменить фильтрацию";
+            this.cancelFilterJurnalButton.Text = "Откл. фильтрацию";
             this.cancelFilterJurnalButton.UseVisualStyleBackColor = false;
             this.cancelFilterJurnalButton.Click += new System.EventHandler(this.cancelFilterJurnalButton_Click);
             // 
             // finishFilterDateTimePicker
             // 
-            this.finishFilterDateTimePicker.Location = new System.Drawing.Point(286, 39);
+            this.finishFilterDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.finishFilterDateTimePicker.Location = new System.Drawing.Point(452, 35);
             this.finishFilterDateTimePicker.Name = "finishFilterDateTimePicker";
-            this.finishFilterDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.finishFilterDateTimePicker.Size = new System.Drawing.Size(216, 26);
             this.finishFilterDateTimePicker.TabIndex = 18;
-            this.finishFilterDateTimePicker.Value = new System.DateTime(2021, 8, 22, 0, 0, 0, 0);
+            this.finishFilterDateTimePicker.Value = new System.DateTime(2022, 4, 4, 0, 0, 0, 0);
             // 
             // filterDateButton
             // 
-            this.filterDateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.filterDateButton.BackColor = System.Drawing.Color.DodgerBlue;
             this.filterDateButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.filterDateButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.filterDateButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.filterDateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.filterDateButton.ForeColor = System.Drawing.Color.Black;
-            this.filterDateButton.Location = new System.Drawing.Point(492, 36);
+            this.filterDateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filterDateButton.ForeColor = System.Drawing.Color.Transparent;
+            this.filterDateButton.Location = new System.Drawing.Point(674, 33);
             this.filterDateButton.Name = "filterDateButton";
-            this.filterDateButton.Size = new System.Drawing.Size(136, 23);
+            this.filterDateButton.Size = new System.Drawing.Size(180, 30);
             this.filterDateButton.TabIndex = 17;
             this.filterDateButton.Text = "Фильтр по дате";
             this.filterDateButton.UseVisualStyleBackColor = false;
@@ -362,27 +411,30 @@ namespace journal
             // 
             // beginFilterDateTimePicker
             // 
-            this.beginFilterDateTimePicker.Location = new System.Drawing.Point(286, 13);
+            this.beginFilterDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.beginFilterDateTimePicker.Location = new System.Drawing.Point(452, 77);
             this.beginFilterDateTimePicker.Name = "beginFilterDateTimePicker";
-            this.beginFilterDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.beginFilterDateTimePicker.Size = new System.Drawing.Size(216, 26);
             this.beginFilterDateTimePicker.TabIndex = 16;
-            this.beginFilterDateTimePicker.Value = new System.DateTime(2021, 8, 22, 0, 0, 0, 0);
+            this.beginFilterDateTimePicker.Value = new System.DateTime(2022, 4, 4, 0, 0, 0, 0);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(39, 19);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(3, 38);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 13);
+            this.label3.Size = new System.Drawing.Size(120, 20);
             this.label3.TabIndex = 15;
-            this.label3.Text = "Фильтр по всем полям";
+            this.label3.Text = "по всем полям";
             // 
             // filterThingFild
             // 
-            this.filterThingFild.Location = new System.Drawing.Point(171, 12);
+            this.filterThingFild.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filterThingFild.Location = new System.Drawing.Point(129, 34);
             this.filterThingFild.Name = "filterThingFild";
-            this.filterThingFild.Size = new System.Drawing.Size(100, 20);
+            this.filterThingFild.Size = new System.Drawing.Size(178, 26);
             this.filterThingFild.TabIndex = 14;
             this.filterThingFild.TextChanged += new System.EventHandler(this.filterThingFild_TextChanged);
             // 
@@ -395,12 +447,13 @@ namespace journal
             this.loginUserColumnHeader,
             this.topicColumnHeader,
             this.dateColumnHeader});
+            this.listJournal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listJournal.FullRowSelect = true;
             this.listJournal.GridLines = true;
             this.listJournal.HideSelection = false;
-            this.listJournal.Location = new System.Drawing.Point(8, 71);
+            this.listJournal.Location = new System.Drawing.Point(8, 126);
             this.listJournal.Name = "listJournal";
-            this.listJournal.Size = new System.Drawing.Size(760, 263);
+            this.listJournal.Size = new System.Drawing.Size(860, 397);
             this.listJournal.TabIndex = 0;
             this.listJournal.UseCompatibleStateImageBehavior = false;
             this.listJournal.View = System.Windows.Forms.View.Details;
@@ -414,7 +467,7 @@ namespace journal
             // 
             // loginUserColumnHeader
             // 
-            this.loginUserColumnHeader.Text = "Пользователь";
+            this.loginUserColumnHeader.Text = "Сотрудник";
             this.loginUserColumnHeader.Width = 98;
             // 
             // topicColumnHeader
@@ -423,14 +476,14 @@ namespace journal
             // 
             // RegisterTabPage
             // 
-            this.RegisterTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.RegisterTabPage.BackColor = System.Drawing.SystemColors.Info;
             this.RegisterTabPage.Controls.Add(this.panel2);
             this.RegisterTabPage.Controls.Add(this.listRegister);
             this.RegisterTabPage.Controls.Add(this.panel4);
-            this.RegisterTabPage.ForeColor = System.Drawing.Color.White;
-            this.RegisterTabPage.Location = new System.Drawing.Point(4, 22);
+            this.RegisterTabPage.ForeColor = System.Drawing.SystemColors.Info;
+            this.RegisterTabPage.Location = new System.Drawing.Point(4, 29);
             this.RegisterTabPage.Name = "RegisterTabPage";
-            this.RegisterTabPage.Size = new System.Drawing.Size(776, 380);
+            this.RegisterTabPage.Size = new System.Drawing.Size(876, 573);
             this.RegisterTabPage.TabIndex = 2;
             this.RegisterTabPage.Text = "Регистрация";
             // 
@@ -441,9 +494,9 @@ namespace journal
             this.panel2.Controls.Add(this.buttonAdd);
             this.panel2.Controls.Add(this.buttonDelete);
             this.panel2.Controls.Add(this.buttonChange);
-            this.panel2.Location = new System.Drawing.Point(268, 343);
+            this.panel2.Location = new System.Drawing.Point(197, 528);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(245, 29);
+            this.panel2.Size = new System.Drawing.Size(449, 37);
             this.panel2.TabIndex = 7;
             // 
             // button1
@@ -463,15 +516,16 @@ namespace journal
             // 
             // buttonAdd
             // 
-            this.buttonAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonAdd.BackColor = System.Drawing.Color.DodgerBlue;
             this.buttonAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.buttonAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdd.ForeColor = System.Drawing.Color.Black;
+            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonAdd.ForeColor = System.Drawing.Color.White;
             this.buttonAdd.Location = new System.Drawing.Point(3, 3);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.Size = new System.Drawing.Size(120, 32);
             this.buttonAdd.TabIndex = 19;
             this.buttonAdd.Text = "Добавть";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -479,15 +533,16 @@ namespace journal
             // 
             // buttonDelete
             // 
-            this.buttonDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonDelete.BackColor = System.Drawing.Color.DodgerBlue;
             this.buttonDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.buttonDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDelete.ForeColor = System.Drawing.Color.Black;
-            this.buttonDelete.Location = new System.Drawing.Point(165, 3);
+            this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonDelete.ForeColor = System.Drawing.Color.White;
+            this.buttonDelete.Location = new System.Drawing.Point(326, 0);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(75, 23);
+            this.buttonDelete.Size = new System.Drawing.Size(120, 32);
             this.buttonDelete.TabIndex = 18;
             this.buttonDelete.Text = "Удалить";
             this.buttonDelete.UseVisualStyleBackColor = false;
@@ -495,15 +550,16 @@ namespace journal
             // 
             // buttonChange
             // 
-            this.buttonChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonChange.BackColor = System.Drawing.Color.DodgerBlue;
             this.buttonChange.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonChange.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.buttonChange.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonChange.ForeColor = System.Drawing.Color.Black;
-            this.buttonChange.Location = new System.Drawing.Point(84, 3);
+            this.buttonChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonChange.ForeColor = System.Drawing.Color.White;
+            this.buttonChange.Location = new System.Drawing.Point(166, 3);
             this.buttonChange.Name = "buttonChange";
-            this.buttonChange.Size = new System.Drawing.Size(75, 23);
+            this.buttonChange.Size = new System.Drawing.Size(120, 32);
             this.buttonChange.TabIndex = 17;
             this.buttonChange.Text = "Изменить";
             this.buttonChange.UseVisualStyleBackColor = false;
@@ -517,12 +573,13 @@ namespace journal
             this.UsersLoginColumnHeader,
             this.UsersPassColumnHeader,
             this.UsersPrivilegeColumnHeader});
+            this.listRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listRegister.FullRowSelect = true;
             this.listRegister.GridLines = true;
             this.listRegister.HideSelection = false;
-            this.listRegister.Location = new System.Drawing.Point(216, 47);
+            this.listRegister.Location = new System.Drawing.Point(197, 47);
             this.listRegister.Name = "listRegister";
-            this.listRegister.Size = new System.Drawing.Size(320, 291);
+            this.listRegister.Size = new System.Drawing.Size(449, 475);
             this.listRegister.TabIndex = 6;
             this.listRegister.UseCompatibleStateImageBehavior = false;
             this.listRegister.View = System.Windows.Forms.View.Details;
@@ -552,22 +609,23 @@ namespace journal
             this.panel4.Controls.Add(this.cancelFilterRegButton);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.filterRegFild);
-            this.panel4.Location = new System.Drawing.Point(236, 3);
+            this.panel4.Location = new System.Drawing.Point(197, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(260, 38);
+            this.panel4.Size = new System.Drawing.Size(449, 40);
             this.panel4.TabIndex = 3;
             // 
             // cancelFilterRegButton
             // 
-            this.cancelFilterRegButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cancelFilterRegButton.BackColor = System.Drawing.Color.DodgerBlue;
             this.cancelFilterRegButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancelFilterRegButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.cancelFilterRegButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.cancelFilterRegButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelFilterRegButton.ForeColor = System.Drawing.Color.Black;
-            this.cancelFilterRegButton.Location = new System.Drawing.Point(173, 8);
+            this.cancelFilterRegButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.cancelFilterRegButton.ForeColor = System.Drawing.Color.White;
+            this.cancelFilterRegButton.Location = new System.Drawing.Point(246, 6);
             this.cancelFilterRegButton.Name = "cancelFilterRegButton";
-            this.cancelFilterRegButton.Size = new System.Drawing.Size(75, 21);
+            this.cancelFilterRegButton.Size = new System.Drawing.Size(200, 32);
             this.cancelFilterRegButton.TabIndex = 20;
             this.cancelFilterRegButton.Text = "Отчистить фильтр";
             this.cancelFilterRegButton.UseVisualStyleBackColor = false;
@@ -576,30 +634,32 @@ namespace journal
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(3, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
+            this.label4.Size = new System.Drawing.Size(85, 24);
             this.label4.TabIndex = 15;
             this.label4.Text = "Фильтр";
             // 
             // filterRegFild
             // 
-            this.filterRegFild.Location = new System.Drawing.Point(56, 8);
+            this.filterRegFild.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.filterRegFild.Location = new System.Drawing.Point(94, 9);
             this.filterRegFild.Name = "filterRegFild";
-            this.filterRegFild.Size = new System.Drawing.Size(100, 20);
+            this.filterRegFild.Size = new System.Drawing.Size(146, 26);
             this.filterRegFild.TabIndex = 14;
             this.filterRegFild.TextChanged += new System.EventHandler(this.filterRegFild_TextChanged);
             // 
             // profileTabPage
             // 
-            this.profileTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.profileTabPage.BackColor = System.Drawing.SystemColors.Info;
             this.profileTabPage.Controls.Add(this.panel3);
-            this.profileTabPage.ForeColor = System.Drawing.Color.White;
-            this.profileTabPage.Location = new System.Drawing.Point(4, 22);
+            this.profileTabPage.ForeColor = System.Drawing.SystemColors.Info;
+            this.profileTabPage.Location = new System.Drawing.Point(4, 29);
             this.profileTabPage.Name = "profileTabPage";
             this.profileTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.profileTabPage.Size = new System.Drawing.Size(776, 380);
+            this.profileTabPage.Size = new System.Drawing.Size(876, 573);
             this.profileTabPage.TabIndex = 3;
             this.profileTabPage.Text = "Профиль";
             // 
@@ -607,66 +667,68 @@ namespace journal
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.Controls.Add(this.userNameProfileLabel);
-            this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.exitFromUserButton);
+            this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.buttonChangeNewUserPass);
             this.panel3.Controls.Add(this.oldUserPassFild);
             this.panel3.Controls.Add(this.repitUserPassFild);
             this.panel3.Controls.Add(this.newUserPassFild);
-            this.panel3.Location = new System.Drawing.Point(275, 45);
+            this.panel3.Location = new System.Drawing.Point(325, 141);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(231, 250);
+            this.panel3.Size = new System.Drawing.Size(231, 311);
             this.panel3.TabIndex = 7;
             // 
             // userNameProfileLabel
             // 
             this.userNameProfileLabel.AutoSize = true;
-            this.userNameProfileLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNameProfileLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.userNameProfileLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.userNameProfileLabel.ForeColor = System.Drawing.Color.Black;
             this.userNameProfileLabel.Location = new System.Drawing.Point(66, 36);
             this.userNameProfileLabel.Name = "userNameProfileLabel";
-            this.userNameProfileLabel.Size = new System.Drawing.Size(97, 24);
+            this.userNameProfileLabel.Size = new System.Drawing.Size(105, 24);
             this.userNameProfileLabel.TabIndex = 10;
             this.userNameProfileLabel.Text = "nameUser";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(48, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(144, 24);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Пользователь:";
-            // 
             // exitFromUserButton
             // 
-            this.exitFromUserButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.exitFromUserButton.BackColor = System.Drawing.Color.DodgerBlue;
             this.exitFromUserButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exitFromUserButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.exitFromUserButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.exitFromUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitFromUserButton.ForeColor = System.Drawing.Color.Black;
-            this.exitFromUserButton.Location = new System.Drawing.Point(70, 212);
+            this.exitFromUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.exitFromUserButton.ForeColor = System.Drawing.Color.White;
+            this.exitFromUserButton.Location = new System.Drawing.Point(28, 261);
             this.exitFromUserButton.Name = "exitFromUserButton";
-            this.exitFromUserButton.Size = new System.Drawing.Size(108, 23);
+            this.exitFromUserButton.Size = new System.Drawing.Size(190, 36);
             this.exitFromUserButton.TabIndex = 8;
             this.exitFromUserButton.Text = "Выход из польз.";
             this.exitFromUserButton.UseVisualStyleBackColor = false;
             this.exitFromUserButton.Click += new System.EventHandler(this.exitFromUserButton_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(48, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(157, 24);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Пользователь:";
+            // 
             // buttonChangeNewUserPass
             // 
-            this.buttonChangeNewUserPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonChangeNewUserPass.BackColor = System.Drawing.Color.DodgerBlue;
             this.buttonChangeNewUserPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonChangeNewUserPass.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.buttonChangeNewUserPass.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonChangeNewUserPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonChangeNewUserPass.ForeColor = System.Drawing.Color.Black;
-            this.buttonChangeNewUserPass.Location = new System.Drawing.Point(70, 183);
+            this.buttonChangeNewUserPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.buttonChangeNewUserPass.ForeColor = System.Drawing.Color.White;
+            this.buttonChangeNewUserPass.Location = new System.Drawing.Point(28, 207);
             this.buttonChangeNewUserPass.Name = "buttonChangeNewUserPass";
-            this.buttonChangeNewUserPass.Size = new System.Drawing.Size(108, 23);
+            this.buttonChangeNewUserPass.Size = new System.Drawing.Size(190, 35);
             this.buttonChangeNewUserPass.TabIndex = 6;
             this.buttonChangeNewUserPass.Text = "Сменить пароль";
             this.buttonChangeNewUserPass.UseVisualStyleBackColor = false;
@@ -674,27 +736,30 @@ namespace journal
             // 
             // oldUserPassFild
             // 
-            this.oldUserPassFild.Location = new System.Drawing.Point(56, 75);
+            this.oldUserPassFild.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.oldUserPassFild.Location = new System.Drawing.Point(28, 72);
             this.oldUserPassFild.Name = "oldUserPassFild";
-            this.oldUserPassFild.Size = new System.Drawing.Size(136, 20);
+            this.oldUserPassFild.Size = new System.Drawing.Size(190, 26);
             this.oldUserPassFild.TabIndex = 2;
             this.oldUserPassFild.Enter += new System.EventHandler(this.oldUserPassFild_Enter);
             this.oldUserPassFild.Leave += new System.EventHandler(this.oldUserPassFild_Leave);
             // 
             // repitUserPassFild
             // 
-            this.repitUserPassFild.Location = new System.Drawing.Point(56, 144);
+            this.repitUserPassFild.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.repitUserPassFild.Location = new System.Drawing.Point(28, 165);
             this.repitUserPassFild.Name = "repitUserPassFild";
-            this.repitUserPassFild.Size = new System.Drawing.Size(136, 20);
+            this.repitUserPassFild.Size = new System.Drawing.Size(190, 26);
             this.repitUserPassFild.TabIndex = 4;
             this.repitUserPassFild.Enter += new System.EventHandler(this.repitUserPassFild_Enter);
             this.repitUserPassFild.Leave += new System.EventHandler(this.repitUserPassFild_Leave);
             // 
             // newUserPassFild
             // 
-            this.newUserPassFild.Location = new System.Drawing.Point(56, 108);
+            this.newUserPassFild.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.newUserPassFild.Location = new System.Drawing.Point(28, 119);
             this.newUserPassFild.Name = "newUserPassFild";
-            this.newUserPassFild.Size = new System.Drawing.Size(136, 20);
+            this.newUserPassFild.Size = new System.Drawing.Size(190, 26);
             this.newUserPassFild.TabIndex = 3;
             this.newUserPassFild.Enter += new System.EventHandler(this.newUserPassFild_Enter);
             this.newUserPassFild.Leave += new System.EventHandler(this.newUserPassFild_Leave);
@@ -703,11 +768,12 @@ namespace journal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.BackColor = System.Drawing.SystemColors.Info;
+            this.ClientSize = new System.Drawing.Size(884, 661);
             this.Controls.Add(this.mainTabControl);
             this.Controls.Add(this.panel1);
-            this.MinimumSize = new System.Drawing.Size(800, 500);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.MinimumSize = new System.Drawing.Size(900, 700);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
@@ -784,5 +850,8 @@ namespace journal
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonOpenStatistic;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
     }
 }
