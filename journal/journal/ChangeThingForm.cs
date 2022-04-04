@@ -138,20 +138,13 @@ namespace journal
             {
                 usersLoginComboBox.Visible = false;
                 usersLoginFild.Text = Convert.ToString(table.Rows[0].ItemArray[1]);
-                if (userNameForReadOnly == usersLoginFild.Text)
-                {
-                    buttonChangeThing.Enabled = true;
-                    dateTimePicker.Enabled = true;
-                    topicField.ReadOnly = false;
-                    commentField.ReadOnly = false;
-                }
-                else
-                {
-                    buttonChangeThing.Enabled = false;
-                    dateTimePicker.Enabled = false;
-                    topicField.ReadOnly = true;
-                    commentField.ReadOnly = true;
-                }
+                buttonChangeThing.Enabled = false;
+                dateTimePicker.Enabled = false;
+                topicField.ReadOnly = true;
+                commentField.ReadOnly = true;
+                buttonChangeThing.Visible = false;;
+                buttonCancel.Text = "Закрыть";
+                buttonCancel.Left = 343;
             }
             
             topicField.Text = Convert.ToString(table.Rows[0].ItemArray[2]);
