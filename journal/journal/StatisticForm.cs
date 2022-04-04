@@ -124,7 +124,7 @@ namespace journal
 
             //collor statistic
 
-            for ( int i = 0; i <= listViewStatistics.Columns.Count; i++)
+            for ( int i = 0; i < listViewStatistics.Columns.Count; i++)
             {
                 if (listViewStatistics.Items[i].SubItems[1].Text == listViewStatistics.Items[0].SubItems[1].Text)
                 {
