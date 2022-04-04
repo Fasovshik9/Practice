@@ -119,6 +119,9 @@ namespace journal
                 }
 
             }
+            listViewStatistics.ListViewItemSorter = new ListViewComparer(1);
+            listViewStatistics.Sort();
+            listViewStatistics.Items[0].BackColor = System.Drawing.Color.Green;
         }
 
         private void listJournal_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
@@ -164,6 +167,46 @@ namespace journal
         private void buttonExit_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public class ListViewComparer : System.Collections.IComparer
+        {
+            int colNumber;
+            public ListViewComparer(int column)
+            {
+                colNumber = column;
+            }
+            public int Compare(object objectA, object objectB)
+            {
+                ListViewItem item1 = objectA as ListViewItem;
+                ListViewItem item2 = objectB as ListViewItem;
+
+                string textA = string.Empty;
+                string textB = string.Empty;
+
+
+                if (item1.SubItems.Count > colNumber)
+                    textA = item1.SubItems[colNumber].Text;
+
+                if (item2.SubItems.Count > colNumber)
+                    textB = item2.SubItems[colNumber].Text;
+
+                if (colNumber == 0)
+                {
+                    DateTime date1, date2;
+                    if (DateTime.TryParse(textA, out date1) && DateTime.TryParse(textB, out date2))
+                        return date2.CompareTo(date1);
+                }
+
+                return textB.CompareTo(textA);
+            }
+        }
+
+        private void listViewStatistics_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            listViewStatistics.ListViewItemSorter = new ListViewComparer(e.Column);
+
+            listViewStatistics.Sort();
         }
     }
 }

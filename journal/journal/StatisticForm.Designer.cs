@@ -166,6 +166,7 @@
             this.listViewStatistics.TabIndex = 5;
             this.listViewStatistics.UseCompatibleStateImageBehavior = false;
             this.listViewStatistics.View = System.Windows.Forms.View.Details;
+            this.listViewStatistics.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listViewStatistics_ColumnClick);
             this.listViewStatistics.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listViewStatistics_ColumnWidthChanging);
             // 
             // UserLogginColumn

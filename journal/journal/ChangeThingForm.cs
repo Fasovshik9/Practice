@@ -66,19 +66,23 @@ namespace journal
             MySqlDataReader reader;
             if (topicField.TextLength >= 1 && commentField.TextLength >= 1)
             {
-                try
+                DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите применить изменения?", "Удаление задачи", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    sqlConnection.Open();
-                    reader = commandDatabase.ExecuteReader();
-                    // Succesfully updated
-                    sqlConnection.Close();
+                    try
+                    {
+                        sqlConnection.Open();
+                        reader = commandDatabase.ExecuteReader();
+                        // Succesfully updated
+                        sqlConnection.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        // Ops, maybe the id doesn't exists ?
+                        MessageBox.Show(ex.Message);
+                    }
+                    this.Close();
                 }
-                catch (Exception ex)
-                {
-                    // Ops, maybe the id doesn't exists ?
-                    MessageBox.Show(ex.Message);
-                }
-                this.Close();
             }
             else MessageBox.Show("Все поля должны быть заполнены!", "Ошибка");
         }

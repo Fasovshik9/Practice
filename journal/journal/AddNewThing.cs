@@ -57,19 +57,23 @@ namespace journal
             commandDatabase.CommandTimeout = 60;
             if (topicField.TextLength >= 1 && commentField.TextLength >= 1)
             {
-                try
+                DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите добавить задачу?", "Удаление задачи", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    sqlConnection.Open();
-                    MySqlDataReader myReader = commandDatabase.ExecuteReader();
-                    MessageBox.Show("Новое дело было добавлено", "Уведомление");
-                    sqlConnection.Close();
+                    try
+                    {
+                        sqlConnection.Open();
+                        MySqlDataReader myReader = commandDatabase.ExecuteReader();
+                        MessageBox.Show("Новая задача было добавлено", "Уведомление");
+                        sqlConnection.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        // Show any error message.
+                        MessageBox.Show(ex.Message);
+                    }
+                    this.Close();
                 }
-                catch (Exception ex)
-                {
-                    // Show any error message.
-                    MessageBox.Show(ex.Message);
-                }
-                this.Close();
             }
             else MessageBox.Show("Все поля должны быть заполнены !", "Ошибка");
 

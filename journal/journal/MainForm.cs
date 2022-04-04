@@ -66,6 +66,9 @@ namespace journal
             {
                 mainTabControl.TabPages.Remove(RegisterTabPage);
                 buttonOpenStatistic.Visible = false;
+                buttonChangeNewThing.Visible = false;
+                buttonDeletThing.Visible = false;
+                buttonReport.Visible = false;
             }
 
             mainTabControl.SelectedIndex += 1;
@@ -205,7 +208,7 @@ namespace journal
         {
             if (this.listRegister.SelectedItems.Count != 0)
             {
-                DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить пользователя?", "Удалить пользователя", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите удалить пользователя?", "Удаление пользователя", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     string idUserMouse = idValueMouse;

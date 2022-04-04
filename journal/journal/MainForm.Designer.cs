@@ -698,7 +698,7 @@ namespace journal
             this.exitFromUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitFromUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.exitFromUserButton.ForeColor = System.Drawing.Color.White;
-            this.exitFromUserButton.Location = new System.Drawing.Point(28, 261);
+            this.exitFromUserButton.Location = new System.Drawing.Point(21, 260);
             this.exitFromUserButton.Name = "exitFromUserButton";
             this.exitFromUserButton.Size = new System.Drawing.Size(190, 36);
             this.exitFromUserButton.TabIndex = 8;
@@ -726,7 +726,7 @@ namespace journal
             this.buttonChangeNewUserPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonChangeNewUserPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.buttonChangeNewUserPass.ForeColor = System.Drawing.Color.White;
-            this.buttonChangeNewUserPass.Location = new System.Drawing.Point(28, 207);
+            this.buttonChangeNewUserPass.Location = new System.Drawing.Point(21, 207);
             this.buttonChangeNewUserPass.Name = "buttonChangeNewUserPass";
             this.buttonChangeNewUserPass.Size = new System.Drawing.Size(190, 35);
             this.buttonChangeNewUserPass.TabIndex = 6;
@@ -737,9 +737,9 @@ namespace journal
             // oldUserPassFild
             // 
             this.oldUserPassFild.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.oldUserPassFild.Location = new System.Drawing.Point(28, 72);
+            this.oldUserPassFild.Location = new System.Drawing.Point(3, 76);
             this.oldUserPassFild.Name = "oldUserPassFild";
-            this.oldUserPassFild.Size = new System.Drawing.Size(190, 26);
+            this.oldUserPassFild.Size = new System.Drawing.Size(225, 26);
             this.oldUserPassFild.TabIndex = 2;
             this.oldUserPassFild.Enter += new System.EventHandler(this.oldUserPassFild_Enter);
             this.oldUserPassFild.Leave += new System.EventHandler(this.oldUserPassFild_Leave);
@@ -747,9 +747,9 @@ namespace journal
             // repitUserPassFild
             // 
             this.repitUserPassFild.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.repitUserPassFild.Location = new System.Drawing.Point(28, 165);
+            this.repitUserPassFild.Location = new System.Drawing.Point(3, 163);
             this.repitUserPassFild.Name = "repitUserPassFild";
-            this.repitUserPassFild.Size = new System.Drawing.Size(190, 26);
+            this.repitUserPassFild.Size = new System.Drawing.Size(225, 26);
             this.repitUserPassFild.TabIndex = 4;
             this.repitUserPassFild.Enter += new System.EventHandler(this.repitUserPassFild_Enter);
             this.repitUserPassFild.Leave += new System.EventHandler(this.repitUserPassFild_Leave);
@@ -757,9 +757,9 @@ namespace journal
             // newUserPassFild
             // 
             this.newUserPassFild.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.newUserPassFild.Location = new System.Drawing.Point(28, 119);
+            this.newUserPassFild.Location = new System.Drawing.Point(3, 120);
             this.newUserPassFild.Name = "newUserPassFild";
-            this.newUserPassFild.Size = new System.Drawing.Size(190, 26);
+            this.newUserPassFild.Size = new System.Drawing.Size(225, 26);
             this.newUserPassFild.TabIndex = 3;
             this.newUserPassFild.Enter += new System.EventHandler(this.newUserPassFild_Enter);
             this.newUserPassFild.Leave += new System.EventHandler(this.newUserPassFild_Leave);
