@@ -64,7 +64,6 @@ namespace journal
                     {
                         sqlConnection.Open();
                         MySqlDataReader myReader = commandDatabase.ExecuteReader();
-                        MessageBox.Show("Новая задача было добавлено", "Уведомление");
                         sqlConnection.Close();
                     }
                     catch (Exception ex)
