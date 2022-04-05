@@ -552,12 +552,11 @@ namespace journal
         {
             try
             {
-                string dirDestopUser = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Offer.txt";
+                string dirDestopUser = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Offer" + DateTime.Now.ToString("yyyy.MM.dd, HH.mm.ss") + ".txt";
                 using (System.IO.TextWriter tw = new System.IO.StreamWriter(dirDestopUser))
                 {
                     foreach (ListViewItem item in listJournal.Items)
                     {
-                        //tw.WriteLine(item.Text);
                         for (int a = 2; a <= 2; a++) //the 3 = number of subitems in a listview 
                         {
                             tw.Write(item.SubItems[a].Text);
