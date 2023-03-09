@@ -65,6 +65,7 @@ namespace journal
             this.label1.Size = new System.Drawing.Size(240, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Авторизация";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 
@@ -75,6 +76,7 @@ namespace journal
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(784, 406);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
